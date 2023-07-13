@@ -79,6 +79,7 @@ h1 {
 
 h2 {
 	font-size: 30px;
+	text-transform: uppercase;
 }
 
 h3 {
@@ -540,6 +541,11 @@ footer {
 
 	h1 {
 		font-size: 40px;
+	}
+
+	.line_3d {
+		top: 360px;
+
 	}
 
 	.projects_item {
