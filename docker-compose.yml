@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  mfabt-site-emma:
+    container_name: mfabt-site-emma
+    build: .
+    restart: unless-stopped
+    ports:
+      - 127.0.0.1:3001:80
