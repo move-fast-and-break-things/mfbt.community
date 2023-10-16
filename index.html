@@ -524,6 +524,13 @@
         document.querySelector('.nav').classList.toggle('open');
         document.querySelector('.header_menu').classList.toggle('open_header')
       })
+      document.querySelector('.nav').addEventListener('click', (e) => {
+        if (e.target.tagName === 'A') {
+          document.querySelector('.header_menu').classList.remove('open_header');
+          document.querySelector('.nav').classList.remove('open');
+          document.querySelector('.burger').classList.remove('active');
+        }
+      })
     </script>
 </body>
 </html>
