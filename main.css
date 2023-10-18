@@ -243,6 +243,11 @@ hr {
     margin-bottom: 50px;
 }
 
+.desc-left a {
+	text-decoration: none;
+	color: inherit;
+}
+
 .desc-left .see_more {
 	background: linear-gradient(45deg, rgba(251, 155, 215, 1), rgba(234, 241, 96, 1));
 	-webkit-background-clip: text;
