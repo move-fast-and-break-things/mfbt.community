@@ -91,24 +91,24 @@ a:hover {
     }
 }
 
-.shining-image:hover {
-	border-radius: 80px; 
-    animation: shining-img 3s linear infinite;
+.project-name {
+	transition: text-shadow 0.1s, color 0.1s;
+  }
+
+.project-name:hover {
+	text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(153, 250, 245, 0.5);
+	color: #fefb35;
+	animation: none; 
 }
 
-@keyframes shining-img {
-    0% {
-		box-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(153, 250, 245, 0.7);
-        transform: scale(1);
-    }
-    50% {
-		box-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 40px rgba(153, 250, 245, 0.9);
-        transform: scale(1.015);
-    }
-    100% {
-		box-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(153, 250, 245, 0.7);
-        transform: scale(1);
-    }
+.shining-image {
+	border-radius: 80px;
+	transition: transform 0.5s, box-shadow 0.3s;
+  }
+
+.shining-image:hover {
+	transform: scale(1.015); 
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(153, 250, 245, 0.7);
 }
 
 h1 {
