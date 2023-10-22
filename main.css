@@ -148,7 +148,7 @@ h3 {
 	display: flex;
 	/*центрирование меню по середине */
 	left: 50%;
-  transform: translateX(-50%);
+  	transform: translateX(-50%);
 	padding: 10px 50px;
 	align-items: center; 
 	border-radius: 40px;
@@ -211,7 +211,7 @@ h3 {
 
 .nav ul li a {
 	font-size: 14px;
-	margin-right: 40px;
+	margin-right: 20px;
 	color: #ffffff;
 	font-size: 16px;
 }
@@ -220,6 +220,12 @@ ul, li {
 	display: block;
 	padding: 0;
 	margin: 0;
+}
+
+.nav ul li a.join-button {
+	white-space: nowrap;
+    color: #7dffe3;
+	text-transform: uppercase;
 }
 
 .logo {
@@ -393,6 +399,26 @@ hr {
 	font-size: 16px;
 	margin-top: 20px;
 	width: 200px;
+}
+
+.join {
+	margin-top: 80px;
+}
+
+.join h2 {
+	margin-top: 40px;
+}
+
+.join p {
+	font-size: 16px;
+	margin-top: 40px;
+	color: #97999A;
+}
+
+.join a {
+	text-decoration: none;
+	color: #7dffe3;
+	font-weight: bold;
 }
 
 footer {
