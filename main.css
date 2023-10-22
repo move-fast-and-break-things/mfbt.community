@@ -309,7 +309,7 @@ hr {
 }
 
 .creators {
-	padding-top: 120px;
+	padding-top: 20px;
 }
 
 .star {
@@ -586,4 +586,15 @@ footer {
 		from {opacity: 0}
 		to {opacity: 1}
 	}
-	
+.mv {
+	color: #97999A;
+	width: 120%;
+	margin-top: 20px;
+	margin-bottom: 40px;
+	font-size: x-large;
+	line-height: 180%;
+}
+.mc {
+	margin-top: 100px;
+	margin-left: 137px;
+}
