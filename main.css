@@ -593,8 +593,12 @@ footer {
 	margin-bottom: 40px;
 	font-size: x-large;
 	line-height: 180%;
+
 }
 .mc {
 	margin-top: 100px;
 	margin-left: 137px;
+}
+ol {
+    list-style-type: decimal;
 }
