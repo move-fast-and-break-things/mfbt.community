@@ -10,30 +10,39 @@ function loadMore() {
     document.getElementById('load-more-button').style.display = 'none';
 }
 
-async function loadAuthors() {
-  const apiURL = "https://api.github.com/orgs/move-fast-and-break-things/members"
-  await fetch(apiURL)
-          .then((result) => result.json())
-          .then((data) => {
-            data.forEach(element => {
-              fetch(element.url)
-                .then((result) => result.json())
-                .then((data) => {
-                  document.querySelector("#creators > div > div").innerHTML +=
-                    `
-                    <div class="person">
-                      <div class="name_and_img">
-                        <img src="${data.avatar_url}" alt="">
-                        <p class="person_name">${data.name?data.name:data.login}</p>
-                      </div>
-                      <p class="about_person">${data.bio}</p>
-                    </div>
-                    `
-                })
-            })
-          })
+async function getAuthors() {
+  const apiURL = "https://api.github.com/orgs/move-fast-and-break-things/members";
+  let authors = [];
+  const result = await fetch(apiURL);                             // Using github api to get the list of members 
+  const data = await result.json();
+  for (const element of data) {                                   // Getting avatar name, biography and url from each user, then putting them into an array
+    const result = await fetch(element.url);
+    const data = await result.json();
+    authors.push({
+      name: data.name ? data.name : data.login,
+      bio: data.bio,
+      avatar: data.avatar_url
+    });
+  }
+  return authors;
+}
+
+async function setAuthors() {                                    // Getting authors and placing them
+  const authors = await getAuthors();
+  for (const author of authors) {
+    document.querySelector("#creators > div > div").innerHTML +=
+      `
+      <div class="person">
+        <div class="name_and_img">
+          <img src="${author.avatar}" alt="">
+          <p class="person_name">${author.name}</p>
+        </div>
+        <p class="about_person">${author.bio}</p>
+       </div>
+       `;
+  }
 }
 
 window.onload = function() {
-  loadAuthors()
+  setAuthors();
 }
