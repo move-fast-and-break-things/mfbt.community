@@ -1,123 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script type="text/javascript">
-    $(function() {
-      $(window).scroll(function() {
-        if($(this).scrollTop() != 0) {
-          $('#toTop').fadeIn();
-        } else {
-          $('#toTop').fadeOut();
-        } 
-      }); 
-      $('#toTop').click(function() {  
-        $('body,html').animate({scrollTop:0},800); 
-      }); 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+    $(window).scroll(function () {
+      if ($(this).scrollTop() != 0) {
+        $('#toTop').fadeIn();
+      } else {
+        $('#toTop').fadeOut();
+      }
     });
-  </script>
+    $('#toTop').click(function () {
+      $('body,html').animate({ scrollTop: 0 }, 800);
+    });
+  });
+</script>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="community of software engineers and product builders originally created for KubSAU students">
-    <meta name="keywords" content="study group, software development, product building, software engineering, web development, machine learning">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <title>Move Fast and Break Things</title>
-    <script src="app.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="description"
+    content="community of software engineers and product builders originally created for KubSAU students">
+  <meta name="keywords"
+    content="study group, software development, product building, software engineering, web development, machine learning">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+  <title>Move Fast and Break Things</title>
+  <script src="app.js" defer></script>
 </head>
-<div ID = "toTop" ></div>
+<div ID="toTop"></div>
+
 <body>
-    <header id="header" class="header"> 
-        <div class="container">
-          
-        <div class="header_menu">
-          <div class="logo">
-            <img src="img/logo.svg" alt="MFBT">
-          </div>
+  <header id="header" class="header">
+    <div class="container">
 
-          <nav class="nav">
-              <ul class="menu_list">
-                <li>
-                  <a class="menu_link" href="#">community</a>
-                </li>
-                <li>
-                  <a class="menu_link" href="#projects">projects</a>
-                </li>
-                <li>
-                  <a class="menu_link" href="#creators">creators</a>
-                </li>
-                <li>
-                  <a class="menu_link join-button" href="#join">Join us</a>
-                </li>
-              </ul>
-          </nav>
-
-          <div class="burger">
-            <span></span>
-          </div>
+      <div class="header_menu">
+        <div class="logo">
+          <img src="img/logo.svg" alt="MFBT">
         </div>
-          
-          <div class="main_description">
-            <h1>
-                MOVE FAST AND<br>BREAK THINGS
-            </h1>
-            <p>We are a community of software engineers and product developers, originally created for students of KubSAU</p>
-          </div>
 
-          <div class="line_3d">
-            <img src="img/3d_line.png" alt="">
-          </div>
+        <nav class="nav">
+          <ul class="menu_list">
+            <li>
+              <a class="menu_link" href="#">community</a>
+            </li>
+            <li>
+              <a class="menu_link" href="#projects">projects</a>
+            </li>
+            <li>
+              <a class="menu_link" href="#creators">creators</a>
+            </li>
+            <li>
+              <a class="menu_link join-button" href="#join">Join us</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="burger">
+          <span></span>
         </div>
-      </header>
+      </div>
+
+      <div class="main_description">
+        <h1>
+          MOVE FAST AND<br>BREAK THINGS
+        </h1>
+        <p>We are a community of software engineers and product developers, originally created for students of KubSAU
+        </p>
+      </div>
+
+      <div class="line_3d">
+        <img src="img/3d_line.png" alt="">
+      </div>
+    </div>
+  </header>
 
 
-      <section id="projects" class="projects"> 
-        <img class="circle_bac" src="img/circle-bac.svg" alt="">
-        <img class="line_bac" src="" alt="">
-        <div class="container">
-          <h2>Projects</h2>
-          <div id="projects_items" class="projects_items">
+  <section id="projects" class="projects">
+    <img class="circle_bac" src="img/circle-bac.svg" alt="">
+    <img class="line_bac" src="" alt="">
+    <div class="container">
+      <h2>Projects</h2>
+      <div id="projects_items" class="projects_items">
 
-          </div>
-        </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
 
-      <section id="creators" class="creators">
-        <div class="container">
-          <h2>Creators</h2>
-          <div class="persons">
-      
-          </div>
-        </div>
-      </section>
+  <section id="creators" class="creators">
+    <div class="container">
+      <h2>Creators</h2>
+      <div class="persons">
 
-      
-      <section id="join" class="join">
-        <div class="container">
-          <hr size=3px width=100% color="#3D4250">
-          <h2>Join us</h2>
-          <p>If you have any questions or would like to become a part of our community, please <a href="https://github.com/move-fast-and-break-things/movefastandbreakthings.club/issues" target="_blank">follow the link</a> to open a new issue. Kindly describe why you are interested in joining our community.</p>
-          <hr size=3px width=100% color="#3D4250">
-        </div>
-      </section>
-      
+      </div>
+    </div>
+  </section>
 
-      <footer>
-        <div class="container">
-          <div class="github_container">
-            <img class="f_logo" src="img/logo.svg" alt="MFBT">
-            <a class="github" href="https://github.com/move-fast-and-break-things">
-              <img src="img/github.png" alt="">
-            </a>
-          </div>
-        </div>
-      </footer>
-    <script>
-      document.querySelector('.burger').addEventListener('click', function() {
-        this.classList.toggle('active');
-        document.querySelector('.nav').classList.toggle('open');
-        document.querySelector('.header_menu').classList.toggle('open_header')
-      })
-    </script>
+
+  <section id="join" class="join">
+    <div class="container">
+      <hr size=3px width=100% color="#3D4250">
+      <h2>Join us</h2>
+      <p>If you have any questions or would like to become a part of our community, please <a
+          href="https://github.com/move-fast-and-break-things/movefastandbreakthings.club/issues" target="_blank">follow
+          the link</a> to open a new issue. Kindly describe why you are interested in joining our community.</p>
+      <hr size=3px width=100% color="#3D4250">
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="container">
+      <div class="github_container">
+        <img class="f_logo" src="img/logo.svg" alt="MFBT">
+        <a class="github" href="https://github.com/move-fast-and-break-things">
+          <img src="img/github.png" alt="">
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.querySelector('.burger').addEventListener('click', function () {
+      this.classList.toggle('active');
+      document.querySelector('.nav').classList.toggle('open');
+      document.querySelector('.header_menu').classList.toggle('open_header')
+    })
+  </script>
 </body>
+
 </html>
