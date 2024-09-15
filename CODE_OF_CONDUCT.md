@@ -30,4 +30,4 @@ We believe that a positive and supportive community is the foundation of a succe
 
 ## Thank You!
 
-Thank you for being a part of our community! Together, we can create something amazing.
+Thank you for being a part of our community! Together, we can create amazing things.
