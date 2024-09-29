@@ -60,28 +60,6 @@ To ensure a smooth review process, please follow these guidelines when submittin
 
 ## 🧐 Code Review Process
 
-### 🔍 How to Perform a Code Review
-
-If you are a contributor or maintainer and you want to review a pull request, please follow these guidelines:
-
-1. **Understand the changes:**
-   - Read the pull request description to understand the proposed changes.
-   - Look at the related issues (if mentioned) to understand the context.
-
-2. **Review the code:**
-   - Be a code detective! 🕵️‍♂️ Check the code for clarity, readability.
-   - Verify that the code is efficient and free of obvious bugs or security issues.
-
-3. **Provide constructive feedback:** 💬
-   - Leave comments on specific lines or sections of the code.
-   - Be constructive and polite in your feedback. Suggest improvements and explain why certain changes might be beneficial.
-   - Use phrases like "Consider...", "Could we...", or "It might be better to..." to keep the feedback positive.
-
-4. **Approve or request changes:**
-   - If the pull request is good to go, approve it.
-   - If in doubt, pull the branch locally and verify that it works as expected before approving it.
-   - If it needs changes, select "Request Changes" and leave detailed feedback on what should be improved.
-
 ### 💌 How to Receive Code Review
 
 As a contributor submitting a pull request, please follow these guidelines when receiving feedback:
@@ -106,5 +84,28 @@ As a contributor submitting a pull request, please follow these guidelines when 
 6. **Stay engaged:**
    - Be responsive to further comments or questions.
    - Code review is an iterative process. Continue to improve your pull request based on feedback until it's ready to be merged.
+   - If the PR is approved, the contributor or maintainer can merge it.
+
+### 🔍 How to Perform a Code Review
+
+If you are a contributor or maintainer and you want to review a pull request, please follow these guidelines:
+
+1. **Understand the changes:**
+   - Read the pull request description to understand the proposed changes.
+   - Look at the related issues (if mentioned) to understand the context.
+
+2. **Review the code:**
+   - Be a code detective! 🕵️‍♂️ Check the code for clarity, readability.
+   - Verify that the code is efficient and free of obvious bugs or security issues.
+
+3. **Provide constructive feedback:** 💬
+   - Leave comments on specific lines or sections of the code.
+   - Be constructive and polite in your feedback. Suggest improvements and explain why certain changes might be beneficial.
+   - Use phrases like "Consider...", "Could we...", or "It might be better to..." to keep the feedback positive.
+
+4. **Approve or request changes:**
+   - If the pull request is good to go, approve it.
+   - If in doubt, pull the branch locally and verify that it works as expected before approving it.
+   - If it needs changes, select "Request Changes" and leave detailed feedback on what should be improved.
 
 Thank you for contributing! You are amazing, and your work is greatly appreciated. Let's build incredible things together ✨
