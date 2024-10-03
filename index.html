@@ -42,13 +42,13 @@
           <nav class="nav">
               <ul class="menu_list">
                 <li>
-                  <a class="menu_link" href="#">community</a>
+                  <a class="menu_link" href="#">Community</a>
                 </li>
                 <li>
-                  <a class="menu_link" href="#projects">projects</a>
+                  <a class="menu_link" href="#projects">Projects</a>
                 </li>
                 <li>
-                  <a class="menu_link" href="#creators">creators</a>
+                  <a class="menu_link" href="#creators">Creators</a>
                 </li>
                 <li>
                   <a class="menu_link join-button" href="#join">Join us</a>
@@ -557,6 +557,13 @@
       })
       document.querySelector('.nav').addEventListener('click', (e) => {
         if (e.target.tagName === 'A') {
+          document.querySelector('.header_menu').classList.remove('open_header');
+          document.querySelector('.nav').classList.remove('open');
+          document.querySelector('.burger').classList.remove('active');
+        }
+      })
+      window.addEventListener('resize',()=>{
+        if(window.innerWidth>=767){
           document.querySelector('.header_menu').classList.remove('open_header');
           document.querySelector('.nav').classList.remove('open');
           document.querySelector('.burger').classList.remove('active');
