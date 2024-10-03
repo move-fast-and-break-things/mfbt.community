@@ -129,6 +129,9 @@ h3 {
 	padding-bottom: 235px;
 }
 
+.hidden{
+	display: none;
+}
 
 .logo img {
 	height: 30px;
