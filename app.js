@@ -1,13 +1,27 @@
 function loadMore() {
-    var paragraphs = document.querySelectorAll('#projects_items .load_more');
-    for (var i = 0; i < paragraphs.length; i++) {
+    const paragraphs = document.querySelectorAll('#projects_items .load_more');
+    for (let i = 0; i < paragraphs.length; i++) {
       paragraphs[i].classList.add('show');
     }
-    var hr = document.querySelectorAll('.line_hr');
-    for (var i = 0; i < hr.length; i++) {
+    const hr = document.querySelectorAll('.line_hr');
+    for (let i = 0; i < hr.length; i++) {
         hr[i].classList.add('sh');
       }
     document.getElementById('load-more-button').style.display = 'none';
+    document.getElementById('hide-button').style.display = 'block';
+}
+
+function hide() {
+    const paragraphs = document.querySelectorAll('#projects_items .load_more');
+    for (let i = 0; i < paragraphs.length; i++) {
+      paragraphs[i].classList.remove('show');
+    }
+    const hr = document.querySelectorAll('.line_hr');
+    for (let i = 0; i < hr.length; i++) {
+        hr[i].classList.remove('sh');
+      }
+    document.getElementById('load-more-button').style.display = 'block';
+    document.getElementById('hide-button').style.display = 'none';
 }
 
 async function getAuthors() {
