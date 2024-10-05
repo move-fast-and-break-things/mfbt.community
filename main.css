@@ -129,6 +129,9 @@ h3 {
 	padding-bottom: 235px;
 }
 
+.hidden{
+	display: none;
+}
 
 .logo img {
 	height: 30px;
@@ -380,10 +383,16 @@ hr {
 	font-size: 16px;
 	margin: auto;
 	margin-top: 30px;
+	cursor: pointer;
 }
 
 
 /*LOAD MORE*/
+#hide-button{
+	display: none;
+}
+
+
 #projects_items .load_more {
 	display: none;
 }
