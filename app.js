@@ -1,32 +1,33 @@
 function loadMore() {
-  const paragraphs = document.querySelectorAll('#projects_items .load_more');
+  const paragraphs = document.querySelectorAll("#projects_items .load_more");
   for (let i = 0; i < paragraphs.length; i++) {
-    paragraphs[i].classList.add('show');
+    paragraphs[i].classList.add("show");
   }
-  const hr = document.querySelectorAll('.line_hr');
+  const hr = document.querySelectorAll(".line_hr");
   for (let i = 0; i < hr.length; i++) {
-      hr[i].classList.add('sh');
-    }
-  document.getElementById('load-more-button').style.display = 'none';
-  document.getElementById('hide-button').style.display = 'block';
+    hr[i].classList.add("sh");
+  }
+  document.getElementById("load-more-button").style.display = "none";
+  document.getElementById("hide-button").style.display = "block";
 }
 
 function hide() {
-  const paragraphs = document.querySelectorAll('#projects_items .load_more');
+  const paragraphs = document.querySelectorAll("#projects_items .load_more");
   for (let i = 0; i < paragraphs.length; i++) {
-    paragraphs[i].classList.remove('show');
+    paragraphs[i].classList.remove("show");
   }
-  const hr = document.querySelectorAll('.line_hr');
+  const hr = document.querySelectorAll(".line_hr");
   for (let i = 0; i < hr.length; i++) {
-      hr[i].classList.remove('sh');
-    }
-  document.getElementById('load-more-button').style.display = 'block';
-  document.getElementById('hide-button').style.display = 'none';
+    hr[i].classList.remove("sh");
+  }
+  document.getElementById("load-more-button").style.display = "block";
+  document.getElementById("hide-button").style.display = "none";
 }
 
-async function getAuthors() {
-  const apiURL =
-    "https://api.github.com/orgs/move-fast-and-break-things/members";
+const members_url =
+  "https://api.github.com/orgs/move-fast-and-break-things/members";
+
+async function getAuthors(apiURL) {
   let authors = [];
   const result = await fetch(apiURL); // Using github api to get the list of members
   const data = await result.json();
@@ -44,9 +45,9 @@ async function getAuthors() {
   return authors;
 }
 
-async function setAuthors() {
+async function setAuthors(apiURL) {
   // Getting authors and placing them
-  const authors = await getAuthors();
+  const authors = await getAuthors(apiURL);
   for (const author of authors) {
     document.querySelector("#creators > div > div").innerHTML += `
     <div class="person">
@@ -58,32 +59,39 @@ async function setAuthors() {
      </div>
      `;
   }
-  
-  let developersList = document.getElementsByClassName("developers-list");
-  for (let i = 0; i < developersList.length; i++) {
-    let list = developersList[i];
-    if (authors.length > 0) {
-      // Clear loading message
-      list.innerHTML = "";
-      // List developer names
-      authors.forEach((author) => {
-        list.innerHTML += 
-        `
+}
+
+async function setContributors(apiURL, element) {
+  const contributors = await getAuthors(apiURL);
+  if (contributors.length > 0) {
+    // Clear loading message
+    element.innerHTML = "";
+    // List developer names
+    contributors.forEach((contributor) => {
+      element.innerHTML += `
         <span class="developer-name">
-          <a href="${author.html_url}" class="tooltip" target="_blank">  
-            <img src="${author.avatar}" alt="" class="shining-image">  
-            <span class="tooltip-text">${author.name}</span>  
+          <a href="${contributor.html_url}" class="tooltip" target="_blank">  
+            <img src="${contributor.avatar}" alt="" class="shining-image">  
+            <span class="tooltip-text">${contributor.name}</span>  
           </a>
         </span>
-        `;
-      });
-    } else {
-      list.innerHTML = "No developers found";
-    }
+      `;
+    });
+  } else {
+    element.innerHTML = "No developers found";
   }
 }
-/* <span class="developer-name"><a href="${author.html_url}" target="_blank">${author.name}</a></span><br> */
+
+function loadAllContributors() {
+  const developerLists = document.querySelectorAll(".developers-list");
+  developerLists.forEach(async (devList) => {
+    const apiURL = devList.getAttribute("data-value"); // Get API URL from data-value attribute
+    // const id_url = devList.getAttribute("id"); // Get the element id
+    await setContributors(apiURL, devList); // Fetch and set contributors for each element
+  });
+}
 
 window.onload = function () {
-  setAuthors();
+  setAuthors(members_url);
+  loadAllContributors()
 };
