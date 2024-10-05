@@ -48,17 +48,17 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(45deg, #af08f7, #a407b0, #4a0259);
     border-radius: 10px;
-	border: 1px solid #1A1C29;
+    border: 0;
 }
 
 ::-webkit-scrollbar-track {
-    background: #222121;
+    background: transparent;
     border-radius: 10px;
 }
 
