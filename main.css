@@ -287,13 +287,55 @@ hr {
 .desc-left .projects_description {
 	color: #97999A;
 	width: 70%;
-    margin-top: 20px;
-    margin-bottom: 50px;
+	margin-top: 20px;
+	margin-bottom: 50px;
 }
 
 .desc-left a {
 	text-decoration: none;
 	color: inherit;
+}
+
+.desc-left .developers-list
+{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+}
+
+
+.desc-left .developers-list .developer-name .tooltip {  
+	position: relative;  
+	display: inline-block;   
+}  
+
+.desc-left .developers-list .developer-name .tooltip .tooltip-text {  
+	visibility: hidden;  
+	width: 90px;
+	font-size: 10px;
+	background-color: #1a1c29;
+  color: #ffe791;
+	text-align: center;
+	border-radius: 5px;
+	padding: 5px;
+	position: absolute;
+	top: 0%;
+	left: 50%;
+	transform: translate(17%, -25%);
+	z-index: 1;
+	opacity: 0; 
+	transition: visibility 0s, opacity 0.3s linear;
+}  
+
+.desc-left .developers-list .developer-name .tooltip:hover .tooltip-text {  
+	visibility: visible; 
+	opacity: 1; 
+} 
+
+.desc-left .developers-list .developer-name img {
+	width: 45px;
+	border-radius: 50%;
+	border: #3f4676 2px solid;
 }
 
 .desc-left .see_more {
