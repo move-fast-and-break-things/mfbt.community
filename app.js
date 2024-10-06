@@ -83,7 +83,7 @@ async function setContributors(apiURL, element) {
   }
 }
 
-function loadAllContributors() {
+async function loadAllContributors() {
   const developerLists = document.querySelectorAll(".developers-list");
   for (const devList of developerLists) {
     const apiURL = devList.getAttribute("data-value"); // Get API URL from data-value attribute
