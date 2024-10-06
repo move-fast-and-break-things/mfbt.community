@@ -63,32 +63,32 @@ async function setAuthors(apiURL) {
 
 async function setContributors(apiURL, element) {
   const contributors = await getAuthors(apiURL);
-  if (contributors.length > 0) {
-    // Clear loading message
-    element.innerHTML = "";
-    // List developer names
-    contributors.forEach((contributor) => {
-      element.innerHTML += `
-        <span class="developer-name">
-          <a href="${contributor.html_url}" class="tooltip" target="_blank">  
-            <img src="${contributor.avatar}" alt="" class="shining-image">  
-            <span class="tooltip-text">${contributor.name}</span>  
-          </a>
-        </span>
-      `;
-    });
-  } else {
+  if (contributors.length === 0) {
     element.innerHTML = "No developers found";
+    return;
+  }
+  
+  // Clear loading message
+  element.innerHTML = "";
+  // List developer names
+  for (const contributor of contributors) {
+    element.innerHTML += `
+      <span class="developer-name">
+        <a href="${contributor.html_url}" class="tooltip" target="_blank">  
+          <img src="${contributor.avatar}" alt="" class="shining-image">  
+          <span class="tooltip-text">${contributor.name}</span>  
+        </a>
+      </span>
+    `;
   }
 }
 
 function loadAllContributors() {
   const developerLists = document.querySelectorAll(".developers-list");
-  developerLists.forEach(async (devList) => {
+  for (const devList of developerLists) {
     const apiURL = devList.getAttribute("data-value"); // Get API URL from data-value attribute
-    // const id_url = devList.getAttribute("id"); // Get the element id
     await setContributors(apiURL, devList); // Fetch and set contributors for each element
-  });
+  }
 }
 
 window.onload = function () {
