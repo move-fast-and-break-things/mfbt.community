@@ -2,28 +2,31 @@
 
 ![image](https://github.com/move-fast-and-break-things/mfabt_site/assets/92587254/18e628c2-26bb-4f31-8a7f-5173e218ed40)
 
-## Как запустить?
+## How to Run?
 
-### Вариант 1: Запуск вручную
+### Option 1: Run Manually
 
-1. Склонировать репозиторий коммандой git clone
+1. Clone the repository using the command:
    ```bash
    git clone https://github.com/move-fast-and-break-things/mfbt.community.git
    ```
-2. Открыть файл index.html
+2. Open the index.html file.
 
-### Вариант 2: Запуск с помощью Docker
+### Option 2: Run with Docker
 
-1.  Клонируйте репозиторий командой:
+1. Clone the repository using the command:
+   ```bash
+   git clone https://github.com/move-fast-and-break-things/mfbt.community.git
+   ```
+2. Build and run the Docker container:
 
-    ```bash
-    git clone https://github.com/move-fast-and-break-things/mfbt.community.git
-    ```
+   ```bash
+   docker-compose up -d
+   ```
 
-2.  Соберите и запустите контейнер Docker:
+   This will serve the website on http://localhost:3001.
 
-    ```bash
-    docker-compose up -d
-    ```
+## Other languages:
 
-Веб-сайт будет доступен по адресу: http://localhost:3001.
+- [English](README.md)
+- [Русский](README.ru.md)
