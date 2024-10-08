@@ -1,20 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script type="text/javascript">
-    $(function() {
-      $(window).scroll(function() {
-        if($(this).scrollTop() != 0) {
-          $('#toTop').fadeIn();
-        } else {
-          $('#toTop').fadeOut();
-        } 
-      }); 
-      $('#toTop').click(function() {  
-        $('body,html').animate({scrollTop:0},800); 
-      }); 
-    });
-  </script>
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="community of software engineers and product builders originally created for KubSAU students">
@@ -24,7 +9,8 @@
     <meta property="og:description" content="A community of software engineers and product developers, originally created for students of KubSAU">
     <meta property="og:image" content="https://github.com/move-fast-and-break-things/mfabt_site/assets/92587254/18e628c2-26bb-4f31-8a7f-5173e218ed40">
     <meta property="og:url" content="https://movefastandbreakthings.club/">
-    <link rel="stylesheet" href="main.css">
+    <link rel="preload" href="main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="main.css"></noscript>
     <title>Move Fast and Break Things</title>
     <script src="app.js" defer></script>
 </head>
@@ -35,7 +21,7 @@
           
         <div class="header_menu">
           <div class="logo">
-            <a href="#"><img src="img/logo.svg" alt="MFBT"></a>
+            <a href="#" ><img src="img/logo.svg" alt="MFBT"></a>
           </div>
 
           <nav class="nav">
@@ -68,7 +54,10 @@
           </div>
 
           <div class="line_3d">
-            <img src="img/3d_line.png" alt="">
+            <picture>
+              <source srcset="img/3d_line.webp" type="image/webp">
+              <img src="img/3d_line.png" alt="">
+            </picture>
           </div>
         </div>
       </header>
@@ -82,26 +71,29 @@
           <div id="projects_items" class="projects_items">
             <div class="projects_item minerva">
               <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/minerva" target="_blank" class="project-name">
+                <a href="https://github.com/move-fast-and-break-things/minerva" target="_blank" class="project-name" aria-label="Go to Minerva repository">
                   <h3>Minerva</h3>
                 </a>
                 <p class="projects_description">
                   Minerva is a GPT-powered Discord bot built 
                   to help students learn software development.
                   <br><br>
-                    <a href="https://github.com/yurijmikhalevich" target="_blank">
+                    <a href="https://github.com/yurijmikhalevich" target="_blank" aria-label="Go to Yurij Mikhalevich Github profile">
                       Yurij Mikhalevich
                     </a>
                 </p>
-                <a href="https://github.com/move-fast-and-break-things/minerva" class="see_arrow">
-                  <p class="see_more">See more 
+                <a href="https://github.com/move-fast-and-break-things/minerva" class="see_arrow" aria-label="Go to Minerva repository">
+                  <p class="see_more">See repository
                   </p>
                   <img src="img/arrow.svg" alt="">
                 </a>
               </div>
               <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/minerva" target="_blank">
-                  <img src="img/minerva-pr.png" alt="" class="shining-image">
+                <a href="https://github.com/move-fast-and-break-things/minerva" target="_blank" aria-label="Go to Minerva repository">
+                  <picture>
+                    <source srcset="img/minerva-pr.webp" type="image/webp">
+                    <img src="img/minerva-pr.png" alt="" class="shining-image">
+                  </picture>
                 </a>
               </div>          
             </div>
@@ -109,7 +101,7 @@
             <hr size=3px width=100% color="#3D4250">
             <div class="projects_item comsetic_bot">
               <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/cosmetic-helper-bot" target="_blank" class="project-name">
+                <a href="https://github.com/move-fast-and-break-things/cosmetic-helper-bot" target="_blank" class="project-name" aria-label="Go to Cosmetic Helper Bot repository">
                   <h3>Cosmetic helper bot</h3>
                 </a>
                 <p class="projects_description">
@@ -117,19 +109,22 @@
                   most difficult moments. The bot 
                   recognizes the girl's cosmetics.
                   <br><br>
-                  <a href="https://github.com/FiFGamEshka" target="_blank">
+                  <a href="https://github.com/FiFGamEshka" target="_blank" aria-label="Go to Mikhail Voronovskiy Github profile">
                     Mikhail Voronovskiy
                   </a>
                 </p>
-                <a href="https://github.com/move-fast-and-break-things/cosmetic-helper-bot" class="see_arrow">
-                  <p class="see_more">See more 
+                <a href="https://github.com/move-fast-and-break-things/cosmetic-helper-bot" class="see_arrow" aria-label="Go to Cosmetic Helper Bot repository">
+                  <p class="see_more">See repository
                   </p>
                   <img src="img/arrow.svg" alt="">
                 </a>
               </div>
               <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/cosmetic-helper-bot" target="_blank">
+                <a href="https://github.com/move-fast-and-break-things/cosmetic-helper-bot" target="_blank" aria-label="Go to Cosmetic Helper Bot repository">
+                <picture>
+                  <source srcset="img/cosmetic-bot-pr.webp" type="image/webp">
                   <img src="img/cosmetic-bot-pr.png" alt="" class="shining-image">
+                </picture>
                 </a>
               </div>           
             </div>
@@ -137,7 +132,7 @@
             <hr size=3px width=100% color="#3D4250">
             <div class="projects_item the_list">
               <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/the-list" target="_blank" class="project-name">
+                <a href="https://github.com/move-fast-and-break-things/the-list" target="_blank" class="project-name" aria-label="Go to The List repository">
                   <h3>The List</h3>
                 </a>
                 <p class="projects_description">
@@ -148,15 +143,18 @@
                     Loading developers...
                   </span>
                 </p>
-                <a href="https://github.com/move-fast-and-break-things/the-list" class="see_arrow">
-                  <p class="see_more">See more 
+                <a href="https://github.com/move-fast-and-break-things/the-list" class="see_arrow" aria-label="Go to The List repository">
+                  <p class="see_more">See repository
                   </p>
                   <img src="img/arrow.svg" alt="">
                 </a>
               </div>
               <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/the-list" target="_blank">
-                  <img src="img/the-list-pr.png" alt="" class="shining-image">
+                <a href="https://github.com/move-fast-and-break-things/the-list" target="_blank" aria-label="Go to The List repository">
+                  <picture> 
+                    <source srcset="./img/the-list-pr.webp" type="image/webp">
+                    <img src="img/the-list-pr.png" alt="" class="shining-image">
+                  </picture>
                 </a>
               </div>           
             </div>
@@ -164,7 +162,7 @@
             <hr size=3px width=100% color="#3D4250">
             <div class="projects_item emoji_translator">
               <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/rn-emoji-translator-demo" target="_blank" class="project-name">
+                <a href="https://github.com/move-fast-and-break-things/rn-emoji-translator-demo" target="_blank" class="project-name" aria-label="Go to Emoji Translator repository">
                   <h3>Emoji Translator</h3>
                 </a>  
                 <p class="projects_description">
@@ -175,15 +173,18 @@
                     Loading developers...
                   </span>
                 </p>
-                <a href="https://github.com/move-fast-and-break-things/rn-emoji-translator-demo" class="see_arrow">
-                  <p class="see_more">See more 
+                <a href="https://github.com/move-fast-and-break-things/rn-emoji-translator-demo" class="see_arrow" aria-label="Go to Emoji Translator repository">
+                  <p class="see_more">See repository
                   </p>
                   <img src="img/arrow.svg" alt="">
                 </a>
               </div>
               <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/rn-emoji-translator-demo" target="_blank">
-                  <img src="img/emodji.png" alt="" class="shining-image">
+                <a href="https://github.com/move-fast-and-break-things/rn-emoji-translator-demo" target="_blank" aria-label="Go to Emoji Translator repository">
+                  <picture>
+                    <source srcset="img/emodji.webp" type="image/webp">
+                    <img src="img/emodji.png" alt="" class="shining-image">
+                  </picture>
                 </a>
               </div>           
             </div>
@@ -191,26 +192,29 @@
             <hr size=3px width=100% color="#3D4250">
             <div class="projects_item dr_stone_character_classifier">
               <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/dr-stone-character-classifier-demo" target="_blank" class="project-name">
+                <a href="https://github.com/move-fast-and-break-things/dr-stone-character-classifier-demo" target="_blank" class="project-name" aria-label="Go to Dr Stone Character Classifier repository">
                   <h3>Dr Stone Character Classifier</h3>
                 </a>
                 <p class="projects_description">
                   The classifier of Dr. Stone's characters. 
                   Using the fastai library and Binder.
                   <br><br>
-                  <a href="https://github.com/yurijmikhalevich" target="_blank">
+                  <a href="https://github.com/yurijmikhalevich" target="_blank" aria-label="Go to Yurij Mikhalevich Github profile">
                     Yurij Mikhalevich
                   </a>
                 </p>
-                <a href="https://github.com/move-fast-and-break-things/dr-stone-character-classifier-demo" class="see_arrow">
-                  <p class="see_more">See more 
+                <a href="https://github.com/move-fast-and-break-things/dr-stone-character-classifier-demo" class="see_arrow" aria-label="Go to Dr Stone Character Classifier repository">
+                  <p class="see_more">See repository
                   </p>
                   <img src="img/arrow.svg" alt="">
                 </a>
               </div>
               <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/dr-stone-character-classifier-demo" target="_blank">
-                  <img src="img/dr_stone.png" alt="" class="shining-image">
+                <a href="https://github.com/move-fast-and-break-things/dr-stone-character-classifier-demo" target="_blank" aria-label="Go to Dr Stone Character Classifier repository">
+                  <picture>
+                    <source srcset="img/dr_stone.webp" type="image/webp">
+                    <img src="img/dr_stone.png" alt="" class="shining-image">
+                  </picture>
                 </a>
               </div>           
             </div>
@@ -218,25 +222,28 @@
             <hr size=3px width=100% color="#3D4250" class="line_hr">
             <div class="projects_item music_recommender load_more">
               <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/MusicRecommender" target="_blank" class="project-name">
+                <a href="https://github.com/move-fast-and-break-things/MusicRecommender" target="_blank" class="project-name" aria-label="Go to Music Recommender model repository">
                   <h3>Music Recommender</h3>
                 </a>
                 <p class="projects_description">
                   Music recommendation model.
                   <br><br>
-                  <a href="https://github.com/KatyaLetuchaya" target="_blank">
+                  <a href="https://github.com/KatyaLetuchaya" target="_blank" aria-label="Go to Katya Smetanina Github repository">
                     Katya Smetanina 
                   </a>
                 </p>
-                <a href="https://github.com/move-fast-and-break-things/MusicRecommender" class="see_arrow">
-                  <p class="see_more">See more 
+                <a href="https://github.com/move-fast-and-break-things/MusicRecommender" class="see_arrow" aria-label="Go to Music Recommender model repository">
+                  <p class="see_more">See repository
                   </p>
                   <img src="img/arrow.svg" alt="">
                 </a>
               </div>
               <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/MusicRecommender" target="_blank">
-                  <img src="img/music_clas.png" alt="" class="shining-image">
+                <a href="https://github.com/move-fast-and-break-things/MusicRecommender" target="_blank" aria-label="Go to Music Recommender model repository">
+                  <picture>
+                    <source srcset="img/music_clas.webp" type="image/webp">
+                    <img src="img/music_clas.png" alt="" class="shining-image">
+                  </picture>
                 </a>
               </div>           
             </div>
@@ -244,7 +251,7 @@
             <hr size=3px width=100% color="#3D4250" class="line_hr">
             <div class="projects_item car load_more">
               <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/JDM-initial-d-classification" target="_blank" class="project-name">
+                <a href="https://github.com/move-fast-and-break-things/JDM-initial-d-classification" target="_blank" class="project-name" aria-label="Go to Car Classifier repository">
                   <h3>Car Classifier</h3>
                 </a>
                 <p class="projects_description">
@@ -252,20 +259,23 @@
                   By sending a photo of the telegram, the bot determines the
                   brand of the car.
                  <br><br>
-                 <a href="https://github.com/ast3310" target="_blank">
+                 <a href="https://github.com/ast3310" target="_blank" aria-label="Go to Astemir Unarokov Github profile">
                   Astemir Unarokov
                  </a>
                   
                 </p>
-                <a href="https://github.com/move-fast-and-break-things/JDM-initial-d-classification" class="see_arrow">
-                  <p class="see_more">See more 
+                <a href="https://github.com/move-fast-and-break-things/JDM-initial-d-classification" class="see_arrow" aria-label="Go to Car Classifier repository">
+                  <p class="see_more">See repository
                   </p>
                   <img src="img/arrow.svg" alt="">
                 </a>
               </div>
               <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/JDM-initial-d-classification" target="_blank">
-                  <img src="img/car_clas.png" alt="" class="shining-image">
+                <a href="https://github.com/move-fast-and-break-things/JDM-initial-d-classification" target="_blank" aria-label="Go to Car Classifier repository">
+                  <picture>
+                    <source srcset="img/car_clas.webp" type="image/webp">
+                    <img src="img/car_clas.png" alt="" class="shining-image">
+                  </picture>
                 </a>
               </div>           
             </div>
@@ -273,7 +283,7 @@
             <hr size=3px width=100% color="#3D4250" class="line_hr">
             <div class="projects_item japanese_reader load_more">
               <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/japanese-reader" target="_blank" class="project-name">
+                <a href="https://github.com/move-fast-and-break-things/japanese-reader" target="_blank" class="project-name" aria-label="Go to Japanese reader repository">
                   <h3>Japanese Reader</h3>
                 </a>
                 <p class="projects_description">
@@ -281,19 +291,22 @@
                   Katakana. Katakana is a Japanese syllabic 
                   alphabet. 
                   <br><br>
-                  <a href="https://github.com/OstaptsovDanil" target="_blank">
+                  <a href="https://github.com/OstaptsovDanil" target="_blank" aria-label="Go to Danil Ostaptsov Github profile">
                     Danil Ostaptsov
                   </a> 
                 </p>
-                <a href="https://github.com/move-fast-and-break-things/japanese-reader" class="see_arrow">
-                  <p class="see_more">See more 
+                <a href="https://github.com/move-fast-and-break-things/japanese-reader" class="see_arrow" aria-label="Go to Japanese reader repository">
+                  <p class="see_more">See repository
                   </p>
                   <img src="img/arrow.svg" alt="">
                 </a>
               </div>
               <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/japanese-reader" target="_blank">
-                  <img src="img/japanese.png" alt="" class="shining-image">
+                <a href="https://github.com/move-fast-and-break-things/japanese-reader" target="_blank" aria-label="Go to Japanese reader repository">
+                  <picture>
+                    <source srcset="img/japanese.webp" type="image/webp">
+                    <img src="img/japanese.png" alt="" class="shining-image">
+                  </picture>
                 </a>
               </div>           
             </div>
@@ -301,25 +314,28 @@
             <hr size=3px width=100% color="#3D4250" class="line_hr">
             <div class="projects_item audio_compression load_more">
               <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/audio-compression" target="_blank" class="project-name">
+                <a href="https://github.com/move-fast-and-break-things/audio-compression" target="_blank" class="project-name" aria-label="Go to Audio compression repository">
                   <h3>Audio Compression</h3>
                 </a>
                 <p class="projects_description">
                   An algorithm for audio compression. 
                   <br><br>
-                  <a href="https://github.com/Roha990" target="_blank">
+                  <a href="https://github.com/Roha990" target="_blank" aria-label="Go to Artem Belyi Github profile">
                     Artem Belyi
                   </a>
                 </p>
-                <a href="https://github.com/move-fast-and-break-things/audio-compression" class="see_arrow">
-                  <p class="see_more">See more 
+                <a href="https://github.com/move-fast-and-break-things/audio-compression" class="see_arrow" aria-label="Go to Audio compression repository">
+                  <p class="see_more">See repository
                   </p>
                   <img src="img/arrow.svg" alt="">
                 </a>
               </div>
               <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/audio-compression" target="_blank">
-                  <img src="img/audio_com.png" alt="" class="shining-image">
+                <a href="https://github.com/move-fast-and-break-things/audio-compression" target="_blank" aria-label="Go to Audio compression repository">
+                  <picture>
+                    <source srcset="img/audio_com.webp" type="image/webp">
+                    <img src="img/audio_com.png" alt="" class="shining-image">
+                  </picture>
                 </a>
               </div>           
             </div>
@@ -327,26 +343,29 @@
             <hr size=3px width=100% color="#3D4250" class="line_hr">
             <div class="projects_item food_recogniser load_more">
               <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/food-recogniser" target="_blank" class="project-name">
+                <a href="https://github.com/move-fast-and-break-things/food-recogniser" target="_blank" class="project-name" aria-label="Go to Food recogniser repository">
                   <h3>Food Recogniser</h3>
                 </a>
                 <p class="projects_description">
                   The model determines whether the food 
                   is in the picture. 
                   <br><br>
-                  <a href="https://github.com/lolyafedor" target="_blank">
+                  <a href="https://github.com/lolyafedor" target="_blank" aria-label="Go to Fedor Simonov Github profile">
                     Fedor Simonov 
                   </a>
                 </p>
-                <a href="https://github.com/move-fast-and-break-things/food-recogniser" class="see_arrow">
-                  <p class="see_more">See more 
+                <a href="https://github.com/move-fast-and-break-things/food-recogniser" class="see_arrow" aria-label="Go to Food recogniser repository">
+                  <p class="see_more">See repository
                   </p>
                   <img src="img/arrow.svg" alt="">
                 </a>
               </div>
               <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/food-recogniser" target="_blank">
-                  <img src="img/gh_img.png" alt="" class="shining-image">
+                <a href="https://github.com/move-fast-and-break-things/food-recogniser" target="_blank" aria-label="Go to Food recogniser repository">
+                  <picture>
+                    <source srcset="img/gh_img.webp" type="image/webp">
+                    <img src="img/gh_img.png" alt="" class="shining-image">
+                  </picture>
                 </a>
               </div>           
             </div>
@@ -354,26 +373,29 @@
             <hr size=3px width=100% color="#3D4250" class="line_hr">
             <div class="projects_item the_masterpiece_creator  load_more">
               <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/masterpiece-creator" target="_blank" class="project-name">
+                <a href="https://github.com/move-fast-and-break-things/masterpiece-creator" target="_blank" class="project-name" aria-label="Go to The Masterpiece creator repository">
                   <h3>The Masterpiece creator</h3>
                 </a>
                 <p class="projects_description">
                   Masterpiece creator uses the discoart 
                   library to create Disco Diffusion artworks. 
                   <br><br>
-                  <a href="https://github.com/KogaiIrina" target="_blank">
+                  <a href="https://github.com/KogaiIrina" target="_blank" aria-label="Go to Irina Kogay Github profile">
                     Irina Kogay  
                   </a>
                 </p>
-                <a href="https://github.com/move-fast-and-break-things/masterpiece-creator" class="see_arrow">
-                  <p class="see_more">See more 
+                <a href="https://github.com/move-fast-and-break-things/masterpiece-creator" class="see_arrow" aria-label="Go to The Masterpiece creator repository">
+                  <p class="see_more">See repository
                   </p>
                   <img src="img/arrow.svg" alt="">
                 </a>
               </div>
               <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/masterpiece-creator" target="_blank">
-                  <img src="img/gh_img.png" alt="" class="shining-image">
+                <a href="https://github.com/move-fast-and-break-things/masterpiece-creator" target="_blank" aria-label="Go to The Masterpiece creator repository">
+                  <picture>
+                    <source srcset="img/gh_img.webp" type="image/webp">
+                    <img src="img/gh_img.png" alt="" class="shining-image">
+                  </picture>
                 </a>
               </div>           
             </div>
@@ -381,26 +403,29 @@
             <hr size=3px width=100% color="#3D4250" class="line_hr">
             <div class="projects_item tic_tac_toe_app  load_more">
               <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/rn-tic-tac-toe-demo" target="_blank" class="project-name">
+                <a href="https://github.com/move-fast-and-break-things/rn-tic-tac-toe-demo" target="_blank" class="project-name" aria-label="Go to Tic Tac Toe App repository">
                   <h3>Tic-Tac-Toe app</h3>
                 </a>
                 <p class="projects_description">
                   The application is tic-tac-toe 
                   on react native. 
                   <br><br>
-                  <a href="https://github.com/move-fast-and-break-things" target="_blank">
+                  <a href="https://github.com/move-fast-and-break-things" target="_blank" aria-label="Go to Move Fast and Break Things Community on Github">
                     Community
                   </a>
                 </p>
-                <a href="https://github.com/move-fast-and-break-things/rn-tic-tac-toe-demo" class="see_arrow">
-                  <p class="see_more">See more 
+                <a href="https://github.com/move-fast-and-break-things/rn-tic-tac-toe-demo" class="see_arrow" aria-label="Go to Tic Tac Toe App repository">
+                  <p class="see_more">See repository
                   </p>
                   <img src="img/arrow.svg" alt="">
                 </a>
               </div>
               <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/rn-tic-tac-toe-demo" target="_blank">
-                  <img src="img/gh_img.png" alt="" class="shining-image">
+                <a href="https://github.com/move-fast-and-break-things/rn-tic-tac-toe-demo" target="_blank" aria-label="Go to Tic Tac Toe App repository">
+                  <picture>
+                    <source srcset="img/gh_img.webp" type="image/webp">
+                    <img src="img/gh_img.png" alt="" class="shining-image">
+                  </picture>
                 </a>
               </div>           
             </div>
@@ -408,26 +433,29 @@
             <hr size=3px width=100% color="#3D4250" class="line_hr">
             <div class="projects_item porrots load_more">
               <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/Parrots" target="_blank" class="project-name">
+                <a href="https://github.com/move-fast-and-break-things/Parrots" target="_blank" class="project-name" aria-label="Go to Parrots repository">
                   <h3>Parrots</h3>
                 </a>
                 <p class="projects_description">
                   The ML model distinguishes by the photo
                   of wavy, royal and haro parrots.
                   <br><br>
-                  <a href="https://github.com/EmmaMaltseva" target="_blank">
+                  <a href="https://github.com/EmmaMaltseva" target="_blank" aria-label="Go to Emma Maltseva Github profile">
                     Emma Maltseva
                   </a>
                 </p>
-                <a href="https://github.com/move-fast-and-break-things/Parrots" class="see_arrow">
-                  <p class="see_more">See more 
+                <a href="https://github.com/move-fast-and-break-things/Parrots" class="see_arrow" aria-label="Go to Parrots repository">
+                  <p class="see_more">See repository
                   </p>
                   <img src="img/arrow.svg" alt="">
                 </a>
               </div>
               <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/Parrots" target="_blank">
-                  <img src="img/gh_img.png" alt="" class="shining-image">
+                <a href="https://github.com/move-fast-and-break-things/Parrots" target="_blank" aria-label="Go to Parrots repository">
+                  <picture>
+                    <source srcset="img/gh_img.webp" type="image/webp">
+                    <img src="img/gh_img.png" alt="" class="shining-image">
+                  </picture>
                 </a>
               </div>           
             </div>
@@ -435,26 +463,29 @@
             <hr size=3px width=100% color="#3D4250" class="line_hr">
             <div class="projects_item spaceman load_more">
               <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/spacemen" target="_blank" class="project-name">
+                <a href="https://github.com/move-fast-and-break-things/spacemen" target="_blank" class="project-name" aria-label="Go to Spacemen repository">
                   <h3>Spacemen</h3>
                 </a>
                 <p class="projects_description">
                   The ML-model is able to classify astronauts, 
                   space marines and stormtroopers.
                   <br><br>
-                  <a href="https://github.com/OstaptsovDanil" target="_blank">
+                  <a href="https://github.com/OstaptsovDanil" target="_blank" aria-label="Go to Danil Ostaptsov Github profile">
                     Danil Ostaptsov
                   </a>
                 </p>
-                <a href="https://github.com/move-fast-and-break-things/spacemen" class="see_arrow">
-                  <p class="see_more">See more 
+                <a href="https://github.com/move-fast-and-break-things/spacemen" class="see_arrow" aria-label="Go to Spacemen repository">
+                  <p class="see_more">See repository
                   </p>
                   <img src="img/arrow.svg" alt="">
                 </a>
               </div>
               <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/spacemen" target="_blank">
-                  <img src="img/gh_img.png" alt="" class="shining-image">
+                <a href="https://github.com/move-fast-and-break-things/spacemen" target="_blank" aria-label="Go to Spacemen repository">
+                  <picture>
+                    <source srcset="img/gh_img.webp" type="image/webp">
+                    <img src="img/gh_img.png" alt="" class="shining-image">
+                  </picture>
                 </a>
               </div>           
             </div>
@@ -462,25 +493,28 @@
             <hr size=3px width=100% color="#3D4250" class="line_hr">
             <div class="projects_item spider_recognizer load_more">
               <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/spider-recognizer" target="_blank" class="project-name">
+                <a href="https://github.com/move-fast-and-break-things/spider-recognizer" target="_blank" class="project-name" aria-label="Go to Spider Recongnizer repository">
                   <h3>Spider Recognizer</h3>
                 </a>
                 <p class="projects_description">
                   ML model classifying spiders.
                   <br><br>
-                  <a href="https://github.com/KogaiIrina" target="_blank">
+                  <a href="https://github.com/KogaiIrina" target="_blank" aria-label="Go to Irina Kogay Github profile">
                     Irina Kogay  
                   </a>
                 </p>
-                <a href="https://github.com/move-fast-and-break-things/spider-recognizer" class="see_arrow">
-                  <p class="see_more">See more 
+                <a href="https://github.com/move-fast-and-break-things/spider-recognizer" class="see_arrow" aria-label="Go to Spider Recongnizer repository">
+                  <p class="see_more">See repository
                   </p>
                   <img src="img/arrow.svg" alt="">
                 </a>
               </div>
               <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/spider-recognizer" target="_blank">
-                  <img src="img/gh_img.png" alt="" class="shining-image">
+                <a href="https://github.com/move-fast-and-break-things/spider-recognizer" target="_blank" aria-label="Go to Spider Recongnizer repository">
+                  <picture>
+                    <source srcset="img/gh_img.webp" type="image/webp">
+                    <img src="img/gh_img.png" alt="" class="shining-image">
+                  </picture>
                 </a>
               </div>           
             </div>
@@ -488,26 +522,29 @@
             <hr size=3px width=100% color="#3D4250" class="line_hr">
             <div class="projects_item mfbt load_more">
               <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/movefastandbreakthings.club" target="_blank" class="project-name">
+                <a href="https://github.com/move-fast-and-break-things/movefastandbreakthings.club" target="_blank" class="project-name" aria-label="Go to Move Fast and Break Things Club website repository">
                   <h3>MFBT</h3>
                 </a>
                 <p class="projects_description">
                   The Move Fast and Break Things community website. 
                   Contains information about projects and their creators.
                   <br><br>
-                  <a href="https://github.com/EmmaMaltseva" target="_blank">
+                  <a href="https://github.com/EmmaMaltseva" target="_blank" aria-label="Go to Emma Maltseva Github profile">
                     Emma Maltseva
                   </a>
                 </p>
-                <a href="https://github.com/move-fast-and-break-things/movefastandbreakthings.club" class="see_arrow">
-                  <p class="see_more">See more 
+                <a href="https://github.com/move-fast-and-break-things/movefastandbreakthings.club" class="see_arrow" aria-label="Go to Move Fast and Break Things Club website repository">
+                  <p class="see_more">See repository
                   </p>
                   <img src="img/arrow.svg" alt="">
                 </a>
               </div>
               <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/movefastandbreakthings.club" target="_blank">
-                  <img src="img/gh_img.png" alt="" class="shining-image">
+                <a href="https://github.com/move-fast-and-break-things/movefastandbreakthings.club" target="_blank" aria-label="Go to Move Fast and Break Things Club website repository">
+                  <picture>
+                    <source srcset="img/gh_img.webp" type="image/webp">
+                    <img src="img/gh_img.png" alt="" class="shining-image">
+                  </picture>
                 </a>
               </div>           
             </div>
@@ -542,8 +579,8 @@
       <footer>
         <div class="container">
           <div class="github_container">
-            <a href="#"><img class="f_logo" src="img/logo.svg" alt="MFBT"></a>
-            <a class="github" href="https://github.com/move-fast-and-break-things">
+            <a href="#"><img class="f_logo" src="img/logo.svg" alt="MFBT" aria-label="Go to top of the page"></a>
+            <a class="github" href="https://github.com/move-fast-and-break-things" aria-label="Go to Move Fast and Break Things Community on Github">
               <img src="img/github.png" alt="">
             </a>
           </div>
