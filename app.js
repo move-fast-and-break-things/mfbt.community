@@ -1,97 +1,140 @@
+'use strict';
+
+// load more content
 function loadMore() {
-    const paragraphs = document.querySelectorAll('#projects_items .load_more');
-    for (let i = 0; i < paragraphs.length; i++) {
-      paragraphs[i].classList.add('show');
-    }
-    const hr = document.querySelectorAll('.line_hr');
-    for (let i = 0; i < hr.length; i++) {
-        hr[i].classList.add('sh');
-      }
-    document.getElementById('load-more-button').style.display = 'none';
-    document.getElementById('hide-button').style.display = 'block';
+  const paragraphs = document.querySelectorAll('#projects_items .load_more');
+  for (let i = 0; i < paragraphs.length; i++) {
+    paragraphs[i].classList.add('show');
+  }
+  const hr = document.querySelectorAll('.line_hr');
+  for (let i = 0; i < hr.length; i++) {
+    hr[i].classList.add('sh');
+  }
+  document.getElementById('load-more-button').style.display = 'none';
+  document.getElementById('hide-button').style.display = 'block';
 }
 
 function hide() {
-    const paragraphs = document.querySelectorAll('#projects_items .load_more');
-    for (let i = 0; i < paragraphs.length; i++) {
-      paragraphs[i].classList.remove('show');
-    }
-    const hr = document.querySelectorAll('.line_hr');
-    for (let i = 0; i < hr.length; i++) {
-        hr[i].classList.remove('sh');
-      }
-    document.getElementById('load-more-button').style.display = 'block';
-    document.getElementById('hide-button').style.display = 'none';
+  const paragraphs = document.querySelectorAll('#projects_items .load_more');
+  for (let i = 0; i < paragraphs.length; i++) {
+    paragraphs[i].classList.remove('show');
+  }
+  const hr = document.querySelectorAll('.line_hr');
+  for (let i = 0; i < hr.length; i++) {
+    hr[i].classList.remove('sh');
+  }
+  document.getElementById('load-more-button').style.display = 'block';
+  document.getElementById('hide-button').style.display = 'none';
 }
 
-const members_url =
-  "https://api.github.com/orgs/move-fast-and-break-things/members";
+const members_url = "https://api.github.com/orgs/move-fast-and-break-things/members";
 
+// fetch authors data
 async function getAuthors(apiURL) {
-  let authors = [];
-  const result = await fetch(apiURL); // Using github api to get the list of members
-  const data = await result.json();
-  for (const element of data) {
-    // Getting avatar name, biography and url from each user, then putting them into an array
-    const result = await fetch(element.url);
-    const data = await result.json();
-    authors.push({
-      name: data.name ? data.name : data.login,
-      bio: data.bio,
-      avatar: data.avatar_url,
-      html_url: data.html_url,
-    });
+  try {
+    const response = await fetch(apiURL);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.json();
+    return Promise.all(data.map(async (element) => {
+      const userResponse = await fetch(element.url);
+      if (!userResponse.ok) {
+        throw new Error(`HTTP error! status: ${userResponse.status}`);
+      }
+      const userData = await userResponse.json();
+      return {
+        name: userData.name || userData.login,
+        bio: userData.bio,
+        avatar: userData.avatar_url,
+        html_url: userData.html_url,
+      };
+    }));
+  } catch (error) {
+    console.error("Error fetching authors:", error);
+    return [];
   }
-  return authors;
 }
 
+// set authors in the DOM
 async function setAuthors(apiURL) {
-  // Getting authors and placing them
-  const authors = await getAuthors(apiURL);
-  for (const author of authors) {
-    document.querySelector("#creators > div > div").innerHTML += `
-    <div class="person">
-      <div class="name_and_img">
-        <img src="${author.avatar}" alt="">
-        <p class="person_name">${author.name}</p>
-      </div>
-      <p class="about_person">${author.bio}</p>
-     </div>
-     `;
+  try {
+    const authors = await getAuthors(apiURL);
+    const container = document.querySelector("#creators > div > div");
+    if (!container) {
+      throw new Error("Container element not found");
+    }
+    authors.forEach(author => {
+      const personDiv = document.createElement('div');
+      personDiv.className = 'person';
+      personDiv.innerHTML = `
+                <div class="name_and_img">
+                    <img src="${author.avatar}" alt="${author.name}'s avatar">
+                    <p class="person_name">${author.name}</p>
+                </div>
+                <p class="about_person">${author.bio || 'No biography available'}</p>
+            `;
+      container.appendChild(personDiv);
+    });
+  } catch (error) {
+    console.error("Error setting authors:", error);
   }
 }
 
+// set contributors in the DOM
 async function setContributors(apiURL, element) {
-  const contributors = await getAuthors(apiURL);
-  if (contributors.length === 0) {
-    element.innerHTML = "No developers found";
-    return;
-  }
-  
-  // Clear loading message
-  element.innerHTML = "";
-  // List developer names
-  for (const contributor of contributors) {
-    element.innerHTML += `
-      <span class="developer-name">
-        <a href="${contributor.html_url}" class="tooltip" target="_blank">  
-          <img src="${contributor.avatar}" alt="" class="shining-image">  
-          <span class="tooltip-text">${contributor.name}</span>  
-        </a>
-      </span>
-    `;
+  try {
+    const contributors = await getAuthors(apiURL);
+    element.innerHTML = contributors.length === 0 ? "No developers found" :
+      contributors.map(contributor => `
+                <span class="developer-name">
+                    <a href="${contributor.html_url}" class="tooltip" target="_blank">  
+                        <img src="${contributor.avatar}" alt="${contributor.name}'s avatar" class="shining-image">  
+                        <span class="tooltip-text">${contributor.name}</span>  
+                    </a>
+                </span>
+            `).join('');
+  } catch (error) {
+    console.error("Error setting contributors:", error);
+    element.innerHTML = "Error loading developers";
   }
 }
 
+// load all contributors
 async function loadAllContributors() {
   const developerLists = document.querySelectorAll(".developers-list");
-  for (const devList of developerLists) {
-    const apiURL = devList.getAttribute("data-value"); // Get API URL from data-value attribute
-    await setContributors(apiURL, devList); // Fetch and set contributors for each element
-  }
+  const promises = Array.from(developerLists).map(devList => {
+    const apiURL = devList.getAttribute("data-value");
+    return setContributors(apiURL, devList);
+  });
+  await Promise.all(promises);
 }
 
-window.onload = function () {
+// Scroll-to-top functionality
+function setupScrollToTop() {
+  const toTopButton = document.getElementById('toTop');
+  if (!toTopButton) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      toTopButton.style.display = 'block';
+    } else {
+      toTopButton.style.display = 'none';
+    }
+  });
+
+  toTopButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
+
+// Wait for DOM content to be loaded before executing scripts
+document.addEventListener('DOMContentLoaded', () => {
   setAuthors(members_url);
-  loadAllContributors()
-};
+  loadAllContributors();
+  setupScrollToTop();
+});
