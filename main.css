@@ -31,12 +31,14 @@
 	
 	font-family: suisseIntl-r;
 	src: url(fonts/SuisseIntl-Regular.otf);
+	font-display: swap;
 }
 
 @font-face {
 	
 	font-family: suisseIntl-sb;
 	src: url(fonts/SuisseIntl-SemiBold.otf);
+	font-display: swap;
 }
 
 body {
@@ -343,7 +345,6 @@ hr {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	color: rgba(234, 241, 96, 1);
-	width: 100%;
 }
 
 .projects_item .desc-left {
@@ -355,8 +356,7 @@ hr {
 }
 
 .see_arrow .see_more{
-	display: inline-block;
-	width: 80px;
+	margin-right: 10px;
 }
 
 .see_arrow img {
@@ -364,7 +364,8 @@ hr {
 }
 
 .see_arrow {
-	z-index: 1;
+	display: flex;
+  z-index: 1;
 }
 
 hr {
