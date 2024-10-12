@@ -14,7 +14,7 @@
 
 ### Вариант 2: Запуск с помощью Docker
 
-1.  Клонируйте репозиторий командой:
+1.  Склонировать репозиторий командой:
 
     ```bash
     git clone https://github.com/move-fast-and-break-things/mfbt.community.git
