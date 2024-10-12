@@ -10,7 +10,7 @@
    ```bash
    git clone https://github.com/move-fast-and-break-things/mfbt.community.git
    ```
-2. Открыть файл index.html
+2. Открыть файл `index.html`
 
 ### Вариант 2: Запуск с помощью Docker
 
