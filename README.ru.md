@@ -20,7 +20,7 @@
     git clone https://github.com/move-fast-and-break-things/mfbt.community.git
     ```
 
-2.  Соберите и запустите контейнер Docker:
+2. Собрать и запустить Docker контейнер:
 
     ```bash
     docker-compose up -d
