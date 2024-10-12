@@ -6,7 +6,7 @@
 
 ### Вариант 1: Запуск вручную
 
-1. Склонировать репозиторий коммандой git clone
+1. Склонировать репозиторий следующей коммандой:
    ```bash
    git clone https://github.com/move-fast-and-break-things/mfbt.community.git
    ```
