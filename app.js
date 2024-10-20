@@ -31,54 +31,47 @@ const members_url = "https://api.github.com/orgs/move-fast-and-break-things/memb
 
 // fetch authors data
 async function getAuthors(apiURL) {
-  try {
-    const response = await fetch(apiURL);
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    const data = await response.json();
-    return Promise.all(data.map(async (element) => {
-      const userResponse = await fetch(element.url);
-      if (!userResponse.ok) {
-        throw new Error(`HTTP error! status: ${userResponse.status}`);
-      }
-      const userData = await userResponse.json();
-      return {
-        name: userData.name || userData.login,
-        bio: userData.bio,
-        avatar: userData.avatar_url,
-        html_url: userData.html_url,
-      };
-    }));
-  } catch (error) {
-    console.error("Error fetching authors:", error);
-    return [];
+
+  const response = await fetch(apiURL);
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
   }
+  const data = await response.json();
+  return Promise.all(data.map(async (element) => {
+    const userResponse = await fetch(element.url);
+    if (!userResponse.ok) {
+      throw new Error(`HTTP error! status: ${userResponse.status}`);
+    }
+    const userData = await userResponse.json();
+    return {
+      name: userData.name || userData.login,
+      bio: userData.bio,
+      avatar: userData.avatar_url,
+      html_url: userData.html_url,
+    };
+  }));
 }
 
 // set authors in the DOM
 async function setAuthors(apiURL) {
-  try {
-    const authors = await getAuthors(apiURL);
-    const container = document.querySelector("#creators > div > div");
-    if (!container) {
-      throw new Error("Container element not found");
-    }
-    authors.forEach(author => {
-      const personDiv = document.createElement('div');
-      personDiv.className = 'person';
-      personDiv.innerHTML = `
+  const authors = await getAuthors(apiURL);
+  const container = document.querySelector("#creators > div > div");
+  if (!container) {
+    throw new Error("Container element not found");
+  }
+  authors.forEach(author => {
+    const personDiv = document.createElement('div');
+    personDiv.className = 'person';
+    personDiv.innerHTML = `
                 <div class="name_and_img">
                     <img src="${author.avatar}" alt="${author.name}'s avatar">
                     <p class="person_name">${author.name}</p>
                 </div>
                 <p class="about_person">${author.bio || 'No biography available'}</p>
             `;
-      container.appendChild(personDiv);
-    });
-  } catch (error) {
-    console.error("Error setting authors:", error);
-  }
+    container.appendChild(personDiv);
+  });
+
 }
 
 // set contributors in the DOM
@@ -96,7 +89,7 @@ async function setContributors(apiURL, element) {
             `).join('');
   } catch (error) {
     console.error("Error setting contributors:", error);
-    element.innerHTML = "Error loading developers";
+    element.innerHTML = "Can't load the developer list. Check out the repository page to see all of the contributors 😅";
   }
 }
 
@@ -134,7 +127,7 @@ function setupScrollToTop() {
 
 // Wait for DOM content to be loaded before executing scripts
 document.addEventListener('DOMContentLoaded', () => {
-  setAuthors(members_url);
+  setAuthors(members_url).catch(console.error);
   loadAllContributors();
   setupScrollToTop();
 });
