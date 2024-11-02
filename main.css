@@ -662,15 +662,14 @@ footer {
 		padding-top: 40px;
 	}
 	
-h2 {
-    font-size: 28px; 
-    color: #e0e4e9;
-    margin-bottom: 15px; 
+.mav h2 {
+    margin-bottom: 10px;
+		padding-top: 20px;
 }
 
 
 .Mission, .Values {
-    padding: 20px; 
+    padding: 20px 0;
     font-family: Arial, sans-serif; 
     font-size: 16px; 
     line-height: 1.6; 
