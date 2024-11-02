@@ -410,7 +410,7 @@ hr {
 }
 
 .creators {
-	padding-top: 120px;
+	padding-top: 40px;
 }
 
 .star {
@@ -419,7 +419,7 @@ hr {
 }
 .persons {
 	display: flex;
-	margin-top: 80px;
+	margin-top: 40px;
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
@@ -708,3 +708,22 @@ footer {
 		to {opacity: 1}
 	}
 	
+
+	.mav{
+		padding-top: 40px;
+	}
+	
+.mav h2 {
+    margin-bottom: 10px;
+		padding-top: 20px;
+}
+
+
+.Mission, .Values {
+    padding: 20px 0;
+    font-family: Arial, sans-serif; 
+    font-size: 16px; 
+    line-height: 1.6; 
+    color: #97999A; 
+}
+
