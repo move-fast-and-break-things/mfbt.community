@@ -459,11 +459,55 @@ hr {
 
 .join h2 {
 	margin-top: 40px;
+	margin-bottom: 30px;
 }
-
+.Join_Us_text{
+	line-height: 1.6;
+	font-size: 16px;
+	color: #97999A;
+}
+.Join_Us_lines{
+	display: block;
+	margin: 15px 0;
+}
+.how_to_join {
+	margin-top: 25px;
+	display: block;
+	font-weight: bold;
+}
+.What_expected{
+	margin-top: 15px;
+	display: block;
+	font-weight: bold;
+}
+.Join_Us_list1{
+	line-height: 1.6;
+	margin-left: 25px;
+	margin-bottom: 15px;
+	color: #97999A;
+}
+.Join_Us_list1 li::before{
+  content: "\2022";
+  font-size: 18px;
+  color: #97999A;
+  margin-right: 10px;
+  display: inline-block;
+}
+.Join_Us_list2{
+	margin-left: 25px;
+	margin-bottom: 15px;
+	line-height: 1.6;
+	color: #97999A;
+}
+.Join_Us_list2 > li {
+	counter-increment: list-item;
+}
+.Join_Us_list2 > li::before {
+	content: counter(list-item) ". ";
+	font-weight: bold;
+}
 .join p {
 	font-size: 16px;
-	margin-top: 40px;
 	color: #97999A;
 }
 
