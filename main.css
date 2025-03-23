@@ -220,19 +220,17 @@ h3 {
 	color: #ffffff;
 	font-size: 16px;
 }
-
-.nav ul, .nav li {
-	display: inline-block;
-	padding: 0;
-	margin: 0;
-}
-
 .nav ul li a.join-button {
 	white-space: nowrap;
     color: #7dffe3;
 	text-transform: uppercase;
 }
-
+.nav ul, .nav li {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	white-space: nowrap;
+}
 .logo {
 	margin-right: 100px;
 }
