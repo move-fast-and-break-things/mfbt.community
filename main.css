@@ -461,25 +461,6 @@ hr {
 	margin-top: 40px;
 	margin-bottom: 30px;
 }
-.Join_Us_text{
-	line-height: 1.6;
-	font-size: 16px;
-	color: #97999A;
-}
-.Join_Us_lines{
-	display: block;
-	margin: 15px 0;
-}
-.how_to_join {
-	margin-top: 25px;
-	display: block;
-	font-weight: bold;
-}
-.What_expected{
-	margin-top: 15px;
-	display: block;
-	font-weight: bold;
-}
 .Join_Us_list1{
 	line-height: 1.6;
 	margin-left: 25px;
@@ -764,7 +745,7 @@ footer {
 }
 
 
-.Mission, .Values {
+.TextBlock {
     padding: 20px 0;
     font-family: Arial, sans-serif; 
     font-size: 16px; 
