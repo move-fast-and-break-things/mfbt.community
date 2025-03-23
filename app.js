@@ -65,6 +65,7 @@ async function setAuthors(apiURL) {
     personDiv.innerHTML = `
                 <div class="name_and_img">
                     <img src="${author.avatar}" alt="${author.name}'s avatar">
+                     <a href="${contributor.html_url}" class="tooltip" target="_blank">
                     <p class="person_name">${author.name}</p>
                 </div>
                 <p class="about_person">${author.bio || 'No biography available'}</p>
