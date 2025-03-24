@@ -63,16 +63,20 @@ async function setAuthors(apiURL) {
     const personDiv = document.createElement('div');
     personDiv.className = 'person';
     personDiv.innerHTML = `
-                <div class="name_and_img">
-                    <img src="${author.avatar}" alt="${author.name}'s avatar">
-                    <p class="person_name">${author.name}</p>
-                </div>
-                <p class="about_person">${author.bio || 'No biography available'}</p>
-            `;
+      <div class="name_and_img">
+        <a href="${author.html_url}" class="tooltip" target="_blank">
+          <img src="${author.avatar}" alt="${author.name}'s avatar">
+        </a>
+        <p class="person_name">${author.name}</p>
+      </div>
+      <p class="about_person">${author.bio || 'No biography available'}</p>
+    `;
     container.appendChild(personDiv);
   });
-
 }
+
+
+
 
 // set contributors in the DOM
 async function setContributors(apiURL, element) {
