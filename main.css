@@ -731,3 +731,13 @@ footer {
     color: #97999A; 
 }
 
+.tooltip {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+}
+
+.tooltip p {
+    margin: 0;
+    display: inline-block; 
+}
