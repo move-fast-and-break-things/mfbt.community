@@ -64,9 +64,12 @@ async function setAuthors(apiURL) {
     personDiv.className = 'person';
     personDiv.innerHTML = `
                 <div class="name_and_img">
+                <a href="${author.html_url}" class="tooltip" target="_blank">  
                     <img src="${author.avatar}" alt="${author.name}'s avatar">
                     <p class="person_name">${author.name}</p>
+                    </a>
                 </div>
+                
                 <p class="about_person">${author.bio || 'No biography available'}</p>
             `;
     container.appendChild(personDiv);

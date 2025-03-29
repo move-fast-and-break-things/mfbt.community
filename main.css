@@ -436,7 +436,8 @@ hr {
 	font-size: 20px;
 	margin-top: 20px;
 	margin-left: 30px;
-	width: 30%;
+	width: 30%;	
+	color: #fff;
 }
 
 .persons img {
@@ -729,5 +730,16 @@ footer {
     font-size: 16px; 
     line-height: 1.6; 
     color: #97999A; 
+}
+
+.tooltip {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+}
+
+.tooltip p {
+    margin: 0;
+    display: inline-block; 
 }
 
