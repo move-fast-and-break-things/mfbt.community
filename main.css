@@ -436,7 +436,8 @@ hr {
 	font-size: 20px;
 	margin-top: 20px;
 	margin-left: 30px;
-	width: 30%;
+	width: 30%;	
+	color: #fff;
 }
 
 .persons img {
@@ -741,3 +742,4 @@ footer {
     margin: 0;
     display: inline-block; 
 }
+
