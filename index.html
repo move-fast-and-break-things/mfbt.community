@@ -2,629 +2,150 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="community of software engineers and product builders originally created for KubSAU students">
-    <meta name="keywords" content="study group, software development, product building, software engineering, web development, machine learning">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Move Fast and Break Things">
-    <meta property="og:description" content="A community of software engineers and product developers, originally created for students of KubSAU">
-    <meta property="og:image" content="https://github.com/move-fast-and-break-things/mfabt_site/assets/92587254/18e628c2-26bb-4f31-8a7f-5173e218ed40">
-    <meta property="og:url" content="https://movefastandbreakthings.club/">
-    <link rel="stylesheet" href="main.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="/favicon_io/site.webmanifest">
-    <title>Move Fast and Break Things</title>
-    <script src="app.js" defer></script>
+    <title>Developer Community</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<div ID = "toTop" ></div>
 <body>
-    <header id="header" class="header"> 
-        <div class="container">
-          
-        <div class="header_menu">
-          <div class="logo">
-            <a href="#" ><img src="img/logo.svg" alt="MFBT"></a>
-          </div>
 
-          <nav class="nav">
-              <ul class="menu_list">
-                <li>
-                  <a class="menu_link" href="#">Community</a>
-                </li>
-                <li>
-                  <a class="menu_link" href="#projects">Projects</a>
-                </li>
-                <li>
-                  <a class="menu_link" href="#creators">Creators</a>
-                </li>
-                <li>
-                  <a class="menu_link join-button" href="#join">Join us</a>
-                </li>
-              </ul>
-          </nav>
-
-          <div class="burger">
-            <span></span>
-          </div>
-        </div>
-          
-          <div class="main_description">
-            <h1>
-                MOVE FAST AND<br>BREAK THINGS
-            </h1>
-            <p>We are a community of software engineers and product developers, originally created for students of KubSAU</p>
-          </div>
-
-          <div class="line_3d">
-            <img src="img/3d_line.webp" alt="">
-          </div>
-        </div>
-      </header>
-
-
-      <section id="projects" class="projects"> 
-        <img class="circle_bac" src="img/circle-bac.svg" alt="">
-        <img class="line_bac" src="" alt="">
-        <div class="container">
-          <h2>Projects</h2>
-          <div id="projects_items" class="projects_items">
-            <div class="projects_item minerva">
-              <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/minerva" target="_blank" class="project-name" aria-label="Go to Minerva repository">
-                  <h3>Minerva</h3>
-                </a>
-                <p class="projects_description">
-                  Minerva is a GPT-powered Discord bot built 
-                  to help students learn software development.
-                  <br><br>
-                    <a href="https://github.com/yurijmikhalevich" target="_blank" aria-label="Go to Yurij Mikhalevich Github profile">
-                      Yurij Mikhalevich
-                    </a>
-                </p>
-                <a href="https://github.com/move-fast-and-break-things/minerva" class="see_arrow" aria-label="Go to Minerva repository">
-                  <p class="see_more">See repository
-                  </p>
-                  <img src="img/arrow.svg" alt="">
-                </a>
-              </div>
-              <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/minerva" target="_blank" aria-label="Go to Minerva repository">
-                    <img src="img/minerva-pr.webp" alt="" class="shining-image">
-                </a>
-              </div>          
-            </div>
-
-            <hr size=3px width=100% color="#3D4250">
-            <div class="projects_item comsetic_bot">
-              <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/cosmetic-helper-bot" target="_blank" class="project-name" aria-label="Go to Cosmetic Helper Bot repository">
-                  <h3>Cosmetic helper bot</h3>
-                </a>
-                <p class="projects_description">
-                  This is a bot that helps men in the 
-                  most difficult moments. The bot 
-                  recognizes the girl's cosmetics.
-                  <br><br>
-                  <a href="https://github.com/FiFGamEshka" target="_blank" aria-label="Go to Mikhail Voronovskiy Github profile">
-                    Mikhail Voronovskiy
-                  </a>
-                </p>
-                <a href="https://github.com/move-fast-and-break-things/cosmetic-helper-bot" class="see_arrow" aria-label="Go to Cosmetic Helper Bot repository">
-                  <p class="see_more">See repository
-                  </p>
-                  <img src="img/arrow.svg" alt="">
-                </a>
-              </div>
-              <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/cosmetic-helper-bot" target="_blank" aria-label="Go to Cosmetic Helper Bot repository">
-                  <img src="img/cosmetic-bot-pr.webp" alt="" class="shining-image">
-                </a>
-              </div>           
-            </div>
-
-            <hr size=3px width=100% color="#3D4250">
-            <div class="projects_item the_list">
-              <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/the-list" target="_blank" class="project-name" aria-label="Go to The List repository">
-                  <h3>The List</h3>
-                </a>
-                <p class="projects_description">
-                  The application is an assistant to the headman 
-                  to mark the presence of students in the class.
-                  <br><br>
-                  <span class="developers-list" id="the-list" data-value="https://api.github.com/repos/move-fast-and-break-things/the-list/contributors">
-                    Loading developers...
-                  </span>
-                </p>
-                <a href="https://github.com/move-fast-and-break-things/the-list" class="see_arrow" aria-label="Go to The List repository">
-                  <p class="see_more">See repository
-                  </p>
-                  <img src="img/arrow.svg" alt="">
-                </a>
-              </div>
-              <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/the-list" target="_blank" aria-label="Go to The List repository">
-                    <img src="./img/the-list-pr.webp" alt="" class="shining-image">
-                </a>
-              </div>           
-            </div>
-
-            <hr size=3px width=100% color="#3D4250">
-            <div class="projects_item emoji_translator">
-              <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/rn-emoji-translator-demo" target="_blank" class="project-name" aria-label="Go to Emoji Translator repository">
-                  <h3>Emoji Translator</h3>
-                </a>  
-                <p class="projects_description">
-                  The translator helps to find out the mood level of the 
-                  interlocutor by the emoticons that he sends.
-                  <br><br>
-                  <span class="developers-list" id="emoji-translator" data-value="https://api.github.com/repos/move-fast-and-break-things/rn-emoji-translator-demo/contributors">
-                    Loading developers...
-                  </span>
-                </p>
-                <a href="https://github.com/move-fast-and-break-things/rn-emoji-translator-demo" class="see_arrow" aria-label="Go to Emoji Translator repository">
-                  <p class="see_more">See repository
-                  </p>
-                  <img src="img/arrow.svg" alt="">
-                </a>
-              </div>
-              <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/rn-emoji-translator-demo" target="_blank" aria-label="Go to Emoji Translator repository">
-                    <img src="img/emodji.webp" alt="" class="shining-image">
-                </a>
-              </div>           
-            </div>
-
-            <hr size=3px width=100% color="#3D4250">
-            <div class="projects_item dr_stone_character_classifier">
-              <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/dr-stone-character-classifier-demo" target="_blank" class="project-name" aria-label="Go to Dr Stone Character Classifier repository">
-                  <h3>Dr Stone Character Classifier</h3>
-                </a>
-                <p class="projects_description">
-                  The classifier of Dr. Stone's characters. 
-                  Using the fastai library and Binder.
-                  <br><br>
-                  <a href="https://github.com/yurijmikhalevich" target="_blank" aria-label="Go to Yurij Mikhalevich Github profile">
-                    Yurij Mikhalevich
-                  </a>
-                </p>
-                <a href="https://github.com/move-fast-and-break-things/dr-stone-character-classifier-demo" class="see_arrow" aria-label="Go to Dr Stone Character Classifier repository">
-                  <p class="see_more">See repository
-                  </p>
-                  <img src="img/arrow.svg" alt="">
-                </a>
-              </div>
-              <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/dr-stone-character-classifier-demo" target="_blank" aria-label="Go to Dr Stone Character Classifier repository">
-                    <img src="img/dr_stone.webp" alt="" class="shining-image">
-                </a>
-              </div>           
-            </div>
-
-            <hr size=3px width=100% color="#3D4250" class="line_hr">
-            <div class="projects_item music_recommender load_more">
-              <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/MusicRecommender" target="_blank" class="project-name" aria-label="Go to Music Recommender model repository">
-                  <h3>Music Recommender</h3>
-                </a>
-                <p class="projects_description">
-                  Music recommendation model.
-                  <br><br>
-                  <a href="https://github.com/KatyaLetuchaya" target="_blank" aria-label="Go to Katya Smetanina Github repository">
-                    Katya Smetanina 
-                  </a>
-                </p>
-                <a href="https://github.com/move-fast-and-break-things/MusicRecommender" class="see_arrow" aria-label="Go to Music Recommender model repository">
-                  <p class="see_more">See repository
-                  </p>
-                  <img src="img/arrow.svg" alt="">
-                </a>
-              </div>
-              <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/MusicRecommender" target="_blank" aria-label="Go to Music Recommender model repository">
-                    <img src="img/music_clas.webp" alt="" class="shining-image">
-                </a>
-              </div>           
-            </div>
-
-            <hr size=3px width=100% color="#3D4250" class="line_hr">
-            <div class="projects_item car load_more">
-              <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/JDM-initial-d-classification" target="_blank" class="project-name" aria-label="Go to Car Classifier repository">
-                  <h3>Car Classifier</h3>
-                </a>
-                <p class="projects_description">
-                  The model is able to classify cars from the anime Initial D.  
-                  By sending a photo of the telegram, the bot determines the
-                  brand of the car.
-                 <br><br>
-                 <a href="https://github.com/ast3310" target="_blank" aria-label="Go to Astemir Unarokov Github profile">
-                  Astemir Unarokov
-                 </a>
-                  
-                </p>
-                <a href="https://github.com/move-fast-and-break-things/JDM-initial-d-classification" class="see_arrow" aria-label="Go to Car Classifier repository">
-                  <p class="see_more">See repository
-                  </p>
-                  <img src="img/arrow.svg" alt="">
-                </a>
-              </div>
-              <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/JDM-initial-d-classification" target="_blank" aria-label="Go to Car Classifier repository">
-                    <img src="img/car_clas.webp" alt="" class="shining-image">
-                </a>
-              </div>           
-            </div>
-
-            <hr size=3px width=100% color="#3D4250" class="line_hr">
-            <div class="projects_item japanese_reader load_more">
-              <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/japanese-reader" target="_blank" class="project-name" aria-label="Go to Japanese reader repository">
-                  <h3>Japanese Reader</h3>
-                </a>
-                <p class="projects_description">
-                  Lightning App that recognizes handwritten 
-                  Katakana. Katakana is a Japanese syllabic 
-                  alphabet. 
-                  <br><br>
-                  <a href="https://github.com/OstaptsovDanil" target="_blank" aria-label="Go to Danil Ostaptsov Github profile">
-                    Danil Ostaptsov
-                  </a> 
-                </p>
-                <a href="https://github.com/move-fast-and-break-things/japanese-reader" class="see_arrow" aria-label="Go to Japanese reader repository">
-                  <p class="see_more">See repository
-                  </p>
-                  <img src="img/arrow.svg" alt="">
-                </a>
-              </div>
-              <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/japanese-reader" target="_blank" aria-label="Go to Japanese reader repository">
-                    <img src="img/japanese.webp" alt="" class="shining-image">
-                </a>
-              </div>           
-            </div>
-
-            <hr size=3px width=100% color="#3D4250" class="line_hr">
-            <div class="projects_item audio_compression load_more">
-              <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/audio-compression" target="_blank" class="project-name" aria-label="Go to Audio compression repository">
-                  <h3>Audio Compression</h3>
-                </a>
-                <p class="projects_description">
-                  An algorithm for audio compression. 
-                  <br><br>
-                  <a href="https://github.com/Roha990" target="_blank" aria-label="Go to Artem Belyi Github profile">
-                    Artem Belyi
-                  </a>
-                </p>
-                <a href="https://github.com/move-fast-and-break-things/audio-compression" class="see_arrow" aria-label="Go to Audio compression repository">
-                  <p class="see_more">See repository
-                  </p>
-                  <img src="img/arrow.svg" alt="">
-                </a>
-              </div>
-              <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/audio-compression" target="_blank" aria-label="Go to Audio compression repository">
-                    <img src="img/audio_com.webp" alt="" class="shining-image">
-                </a>
-              </div>           
-            </div>
-
-            <hr size=3px width=100% color="#3D4250" class="line_hr">
-            <div class="projects_item food_recogniser load_more">
-              <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/food-recogniser" target="_blank" class="project-name" aria-label="Go to Food recogniser repository">
-                  <h3>Food Recogniser</h3>
-                </a>
-                <p class="projects_description">
-                  The model determines whether the food 
-                  is in the picture. 
-                  <br><br>
-                  <a href="https://github.com/lolyafedor" target="_blank" aria-label="Go to Fedor Simonov Github profile">
-                    Fedor Simonov 
-                  </a>
-                </p>
-                <a href="https://github.com/move-fast-and-break-things/food-recogniser" class="see_arrow" aria-label="Go to Food recogniser repository">
-                  <p class="see_more">See repository
-                  </p>
-                  <img src="img/arrow.svg" alt="">
-                </a>
-              </div>
-              <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/food-recogniser" target="_blank" aria-label="Go to Food recogniser repository">
-                    <img src="img/gh_img.webp" alt="" class="shining-image">
-                </a>
-              </div>           
-            </div>
-
-            <hr size=3px width=100% color="#3D4250" class="line_hr">
-            <div class="projects_item the_masterpiece_creator  load_more">
-              <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/masterpiece-creator" target="_blank" class="project-name" aria-label="Go to The Masterpiece creator repository">
-                  <h3>The Masterpiece creator</h3>
-                </a>
-                <p class="projects_description">
-                  Masterpiece creator uses the discoart 
-                  library to create Disco Diffusion artworks. 
-                  <br><br>
-                  <a href="https://github.com/KogaiIrina" target="_blank" aria-label="Go to Irina Kogay Github profile">
-                    Irina Kogay  
-                  </a>
-                </p>
-                <a href="https://github.com/move-fast-and-break-things/masterpiece-creator" class="see_arrow" aria-label="Go to The Masterpiece creator repository">
-                  <p class="see_more">See repository
-                  </p>
-                  <img src="img/arrow.svg" alt="">
-                </a>
-              </div>
-              <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/masterpiece-creator" target="_blank" aria-label="Go to The Masterpiece creator repository">
-                    <img src="img/gh_img.webp" alt="" class="shining-image">
-                </a>
-              </div>           
-            </div>
-
-            <hr size=3px width=100% color="#3D4250" class="line_hr">
-            <div class="projects_item tic_tac_toe_app  load_more">
-              <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/rn-tic-tac-toe-demo" target="_blank" class="project-name" aria-label="Go to Tic Tac Toe App repository">
-                  <h3>Tic-Tac-Toe app</h3>
-                </a>
-                <p class="projects_description">
-                  The application is tic-tac-toe 
-                  on react native. 
-                  <br><br>
-                  <a href="https://github.com/move-fast-and-break-things" target="_blank" aria-label="Go to Move Fast and Break Things Community on Github">
-                    Community
-                  </a>
-                </p>
-                <a href="https://github.com/move-fast-and-break-things/rn-tic-tac-toe-demo" class="see_arrow" aria-label="Go to Tic Tac Toe App repository">
-                  <p class="see_more">See repository
-                  </p>
-                  <img src="img/arrow.svg" alt="">
-                </a>
-              </div>
-              <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/rn-tic-tac-toe-demo" target="_blank" aria-label="Go to Tic Tac Toe App repository">
-                    <img src="img/gh_img.webp" alt="" class="shining-image">
-                </a>
-              </div>           
-            </div>
-
-            <hr size=3px width=100% color="#3D4250" class="line_hr">
-            <div class="projects_item porrots load_more">
-              <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/Parrots" target="_blank" class="project-name" aria-label="Go to Parrots repository">
-                  <h3>Parrots</h3>
-                </a>
-                <p class="projects_description">
-                  The ML model distinguishes by the photo
-                  of wavy, royal and haro parrots.
-                  <br><br>
-                  <a href="https://github.com/EmmaMaltseva" target="_blank" aria-label="Go to Emma Maltseva Github profile">
-                    Emma Maltseva
-                  </a>
-                </p>
-                <a href="https://github.com/move-fast-and-break-things/Parrots" class="see_arrow" aria-label="Go to Parrots repository">
-                  <p class="see_more">See repository
-                  </p>
-                  <img src="img/arrow.svg" alt="">
-                </a>
-              </div>
-              <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/Parrots" target="_blank" aria-label="Go to Parrots repository">
-                    <img src="img/gh_img.webp" alt="" class="shining-image">
-                </a>
-              </div>           
-            </div>
-
-            <hr size=3px width=100% color="#3D4250" class="line_hr">
-            <div class="projects_item spaceman load_more">
-              <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/spacemen" target="_blank" class="project-name" aria-label="Go to Spacemen repository">
-                  <h3>Spacemen</h3>
-                </a>
-                <p class="projects_description">
-                  The ML-model is able to classify astronauts, 
-                  space marines and stormtroopers.
-                  <br><br>
-                  <a href="https://github.com/OstaptsovDanil" target="_blank" aria-label="Go to Danil Ostaptsov Github profile">
-                    Danil Ostaptsov
-                  </a>
-                </p>
-                <a href="https://github.com/move-fast-and-break-things/spacemen" class="see_arrow" aria-label="Go to Spacemen repository">
-                  <p class="see_more">See repository
-                  </p>
-                  <img src="img/arrow.svg" alt="">
-                </a>
-              </div>
-              <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/spacemen" target="_blank" aria-label="Go to Spacemen repository">
-                    <img src="img/gh_img.webp" alt="" class="shining-image">
-                </a>
-              </div>           
-            </div>
-
-            <hr size=3px width=100% color="#3D4250" class="line_hr">
-            <div class="projects_item spider_recognizer load_more">
-              <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/spider-recognizer" target="_blank" class="project-name" aria-label="Go to Spider Recongnizer repository">
-                  <h3>Spider Recognizer</h3>
-                </a>
-                <p class="projects_description">
-                  ML model classifying spiders.
-                  <br><br>
-                  <a href="https://github.com/KogaiIrina" target="_blank" aria-label="Go to Irina Kogay Github profile">
-                    Irina Kogay  
-                  </a>
-                </p>
-                <a href="https://github.com/move-fast-and-break-things/spider-recognizer" class="see_arrow" aria-label="Go to Spider Recongnizer repository">
-                  <p class="see_more">See repository
-                  </p>
-                  <img src="img/arrow.svg" alt="">
-                </a>
-              </div>
-              <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/spider-recognizer" target="_blank" aria-label="Go to Spider Recongnizer repository">
-                    <img src="img/gh_img.webp" alt="" class="shining-image">
-                </a>
-              </div>           
-            </div>
-
-            <hr size=3px width=100% color="#3D4250" class="line_hr">
-            <div class="projects_item mfbt load_more">
-              <div class="desc-left">
-                <a href="https://github.com/move-fast-and-break-things/movefastandbreakthings.club" target="_blank" class="project-name" aria-label="Go to Move Fast and Break Things Club website repository">
-                  <h3>MFBT</h3>
-                </a>
-                <p class="projects_description">
-                  The Move Fast and Break Things community website. 
-                  Contains information about projects and their creators.
-                  <br><br>
-                  <a href="https://github.com/EmmaMaltseva" target="_blank" aria-label="Go to Emma Maltseva Github profile">
-                    Emma Maltseva
-                  </a>
-                </p>
-                <a href="https://github.com/move-fast-and-break-things/movefastandbreakthings.club" class="see_arrow" aria-label="Go to Move Fast and Break Things Club website repository">
-                  <p class="see_more">See repository
-                  </p>
-                  <img src="img/arrow.svg" alt="">
-                </a>
-              </div>
-              <div class="desc-right">
-                <a href="https://github.com/move-fast-and-break-things/movefastandbreakthings.club" target="_blank" aria-label="Go to Move Fast and Break Things Club website repository">
-                    <img src="img/gh_img.webp" alt="" class="shining-image">
-                </a>
-              </div>           
-            </div>
-
-            <button id="load-more-button" class="more_pr" onclick="loadMore()">Load More</button>
-            <button id="hide-button" class="more_pr" onclick="hide()">Hide</button>
-          </div>
-        </div>
-      </section>
-
-
-      <section id="MAV" class="mav">
-        <div class="container">
-          <h2>Our Mission</h2>
-          <div class="TextBlock">
-            We are committed to making our community a welcoming space for everyone. 
-            Whether you're a seasoned developer, a beginner, or just curious, 
-            you're welcome here! We dedicated to fostering growth, collaboration, 
-            and continuous learning. Our mission is to cultivate an environment 
-            where individuals support each other in developing exceptional programs 
-            and expanding their knowledge.
-            </div>
-            <h2>Our Values</h2>
-            <div class="TextBlock">
-              To foster a positive community, we encourage behaviors such as:
-              <ul>
-                <li>
-                  <strong>Kindness:</strong> We prioritize respect and kindness towards every member of our community. We encourage a culture of respect where everyone feels valued and appreciated.
-                </li>
-                <li>
-                  <strong>Mutual Assistance:</strong> We strongly believe in the power of collaboration and helping one another. Members are encouraged to support and assist each other in overcoming challenges and achieving their programming goals.
-                </li>
-                <li>
-                  <strong>Openness:</strong> We embrace a culture of curiosity and encourage members to ask questions freely. We understand that questioning leads to deeper understanding and growth.
-                </li>
-                <li>
-                  <strong>Courage:</strong> We encourage our members to step out of their comfort zones and take risks. We believe that by embracing new challenges and exploring uncharted territories, we can grow both personally and professionally.
-                </li>
-                <li>
-                  <strong>Curiosity:</strong> Learning is an exciting journey, and we celebrate the joy of discovering new things. We foster an environment where members can explore new technologies, share knowledge, and embark on learning adventures together.
-                </li>
-              </ul>
-            </div>  
-            </section>
-
-      <section id="creators" class="creators">
-        <div class="container">
-          <h2>Creators</h2>
-          <div class="persons">
-      
-          </div>
-        </div>
-      </section>
-
-      
-      <section id="join" class="join">
-        <div class="container">
-          <hr size=3px width=100% color="#3D4250">
-          <h2>Join us</h2>
-          <div class="TextBlock"><p>Hi!</p>
-
-            <p>Welcome to Move Fast and Break Things: a community where passionate engineers collaborate, experiment, and grow together – fast.</p>
-            
-            <p><b>Who are we?</b> We are a group of motivated, self-organized, hardworking, and kind people of very different levels of experience who are passionate about software engineering and product building. Among our members are experienced engineers and leaders such as Ivan Perkhun (<a  target="_blank" href="https://t.me/perhun">Lead DS at BUDU</a>), Irina Kogai (<a target="_blank" href="https://www.linkedin.com/in/ikogai/">Engineering Lead at YouTalk</a>), and Yurij Mikhalevich (<a target="_blank" href="https://www.linkedin.com/in/yurijmikhalevich/">Staff AI Engineering Lead at QA Wolf</a>).</p>
-            
-            <p>"The community helped gain teamwork experience, master Git, and explore web development. I've tried AI, web, and mobile development here and discovered my true passion," – <a target="_blank" href="https://github.com/OstaptsovDanil">Danil Ostaptsov</a></p>
-            
-            <p>"The community motivates me to work on my project every day," – <a target="_blank" href="https://github.com/Bee133">Ivan Pchelka</a></p>
-            
-            <p><b>What we do?</b> We build fun, cool projects together, like <a target="_blank" href="https://github.com/move-fast-and-break-things/aibyss">Aibyss</a> – a game where you code an AI to compete in a survival game, – and <a target="_blank" href="https://github.com/move-fast-and-break-things/minerva">Minerva</a> – an AI-powered bot that helps us learn more. We also host talks and webinars, and learn new things, like recent advancements in Quantum Computing, all the time!</p>
-            
-            <p><b>What will you get if you join us?</b> Opportunity to:</p>
-            <ul>
-              <li>build AI-driven and educational projects like Minerva or Aibyss</li>
-              <li>develop full-stack, DevOps, or ML practical skills through hands-on collaboration</li>
-              <li>learn time-saving workflows (e.g., CI/CD, Agile practices) to boost productivity</li>
-              <li>get meaningful feedback during weekly peer code reviews and bi-weekly community meetings to boost your professional growth</li>
-              <li>lead projects and mentor others</li>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="logo">&lt;MFBT&gt;</a>
+            <ul class="nav-links">
+                <li><a href="#">Community</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#creators">Creators</a></li>
             </ul>
-            
-            <p><b>Is there a fee?</b> While the opportunities you receive may be expensive elsewhere, joining our community costs $0 USD. This lets us, unlike other communities and courses, value quality of the community members over quantity. We believe all of us can learn from each other regardless of experience or seniority.</p>
-            <p><b>What is expected from you?</b> To maintain our $0 USD membership, we ask you to contribute regularly. <b>Every</b> community member is expected to participate in the community projects (or lead new ones), attend and host community meetings and webinars, and participate in and organize community events. We take this very seriously. Members typically contribute 2–4 hours weekly. The best part is that the actual learning, growth, and development happen when you actively do all of these things!</p>
-            <p><b>How to join?</b></p>
-            <ol>
-              <li><b>Find an issue:</b> Browse <a target="_blank" href="https://github.com/move-fast-and-break-things">our GitHub projects</a> and look for “good first issue” labels.</li>
-              <li><b>Claim it:</b> Comment on the issue to let us know you’re working on it.</li>  
-              <li><b>Code:</b> Submit a PR with your solution.</li>  
-              <li><b>Collaborate:</b> Work with us to refine and merge your PR.</li>  
-              <li><b>Join:</b> We’ll email you within 48 hours after merging by email associated with your Git commits!</li>
-            </ol>
-            <p>Ready to contribute to the community and believe we will have fun working on cool projects together? Start by picking your first GitHub issue today!</p>
-            
-            <p>If you have any questions, contact us on <a target="_blank" href="mailto:mfbt.community@gmail.com">mfbt.community@gmail.com.</a></p></div> 
-          <hr size=3px width=100% color="#3D4250">
-        </div>
-      </section>
-      
+            <a href="#join-us" class="btn join-btn">JOIN US</a>
+        </nav>
+    </header>
 
-      <footer>
-        <div class="container">
-          <div class="github_container">
-            <a href="#"><img class="f_logo" src="img/logo.svg" alt="MFBT" aria-label="Go to top of the page"></a>
-            <a class="github" href="https://github.com/move-fast-and-break-things" aria-label="Go to Move Fast and Break Things Community on Github">
-              <img src="img/github.png" alt="">
-            </a>
-          </div>
+    <main class="hero">
+        <div class="hero-content">
+            <h1>MOVE FAST AND<br>BREAK THINGS</h1>
+            <p>We are a community of software engineers and product developers.</p>
         </div>
-      </footer>
-    <script>
-      document.querySelector('.burger').addEventListener('click', function() {
-        this.classList.toggle('active');
-        document.querySelector('.nav').classList.toggle('open');
-        document.querySelector('.header_menu').classList.toggle('open_header')
-      })
-      document.querySelector('.nav').addEventListener('click', (e) => {
-        if (e.target.tagName === 'A') {
-          document.querySelector('.header_menu').classList.remove('open_header');
-          document.querySelector('.nav').classList.remove('open');
-          document.querySelector('.burger').classList.remove('active');
-        }
-      })
-      window.addEventListener('resize',()=>{
-        if(window.innerWidth>=767){
-          document.querySelector('.header_menu').classList.remove('open_header');
-          document.querySelector('.nav').classList.remove('open');
-          document.querySelector('.burger').classList.remove('active');
-        }
-      })
-    </script>
+        <div class="hero-graphic">
+            <img src="img/Gemini_Generated_Image_h19nvjh19nvjh19n.png" alt="Abstract 3D tube graphic">
+        </div>
+    </main>
+
+    <section id="projects" class="projects-section">
+        <h2 class="section-title">OUR PROJECTS</h2>
+        <div class="projects-grid">
+            <div class="project-card" data-title="Minerva" data-img-src="img/project-minerva.jpg" data-details="Minerva is a GPT-powered Discord bot built to help students learn software development. Developed by Yurij Mikhalevich." data-repo-url="https://github.com/move-fast-and-break-things/minerva"><div class="project-image-container"><img src="img/discord-bots.webp" alt="Minerva Project Image"></div><div class="project-info"><h3>Minerva</h3><span class="project-creator">Yurij Mikhalevich</span><p>A GPT-powered Discord bot built to help students learn software development.</p></div></div>
+            
+            <div class="project-card" data-title="Cosmetic helper bot" data-img-src="img/project-cosmetic.jpg" data-details="This is a bot that helps men in the most difficult moments. The bot recognizes the girl's cosmetics. Developed by Mikhail Voronovskiy." data-repo-url="https://github.com/move-fast-and-break-things/cosmetic-helper-bot"><div class="project-image-container"><img src="img/AI-Beauty-blog-cover-770x428.webp" alt="Cosmetic Bot Image"></div><div class="project-info"><h3>Cosmetic helper bot</h3><span class="project-creator">Mikhail Voronovskiy</span><p>A bot that helps in difficult moments by recognizing a girl's cosmetics.</p></div></div>
+            
+            <div class="project-card" data-title="The List" data-img-src="img/project-list.jpg" data-details="The application is an assistant to the headman to mark the presence of students in the class. A community project." data-repo-url="https://github.com/move-fast-and-break-things/the-list"><div class="project-image-container"><img src="img/istockphoto-1007216084-612x612.jpg" alt="The List App Image"></div><div class="project-info"><h3>The List</h3><span class="project-creator">Community Project</span><p>An application assistant for headmen to mark student attendance.</p></div></div>
+
+            <div class="project-card hidden" data-title="Emoji Translator" data-img-src="img/project-emoji.jpg" data-details="The translator helps to find out the mood level of the interlocutor by the emoticons that he sends. A community project." data-repo-url="https://github.com/move-fast-and-break-things/rn-emoji-translator-demo"><div class="project-image-container"><img src="img/imojitranslator.png" alt="Emoji Translator Image"></div><div class="project-info"><h3>Emoji Translator</h3><span class="project-creator">Community Project</span><p>Find out the mood level of an interlocutor by the emoticons they send.</p></div></div>
+
+            <div class="project-card hidden" data-title="Dr Stone Character Classifier" data-img-src="img/project-drstone.jpg" data-details="The classifier of Dr. Stone's characters. Using the fastai library and Binder. Developed by Yurij Mikhalevich." data-repo-url="https://github.com/move-fast-and-break-things/dr-stone-character-classifier-demo"><div class="project-image-container"><img src="img/dr-stone-characters.jpg" alt="Anime Character Classifier Image"></div><div class="project-info"><h3>Dr Stone Character Classifier</h3><span class="project-creator">Yurij Mikhalevich</span><p>A classifier for characters from Dr. Stone, using the fastai library.</p></div></div>
+
+            <div class="project-card hidden" data-title="Music Recommender" data-img-src="img/project-music.jpg" data-details="A music recommendation model. Developed by Katya Smetanina." data-repo-url="https://github.com/move-fast-and-break-things/MusicRecommender"><div class="project-image-container"><img src="img/AI-in-music.jpg" alt="Music Recommender Image"></div><div class="project-info"><h3>Music Recommender</h3><span class="project-creator">Katya Smetanina</span><p>A machine learning model for recommending music.</p></div></div>
+
+            <div class="project-card hidden" data-title="Car Classifier" data-img-src="img/project-car.jpg" data-details="The model is able to classify cars from the anime Initial D. By sending a photo of the telegram, the bot determines the brand of the car. Developed by Astemir Unarokov." data-repo-url="https://github.com/move-fast-and-break-things/JDM-initial-d-classification"><div class="project-image-container"><img src="img/car classifier.webp" alt="Car Classifier Image"></div><div class="project-info"><h3>Car Classifier</h3><span class="project-creator">Astemir Unarokov</span><p>Classifies cars from the anime Initial D via a Telegram bot.</p></div></div>
+
+            <div class="project-card hidden" data-title="Japanese Reader" data-img-src="img/project-japanese.jpg" data-details="Lightning App that recognizes handwritten Katakana. Katakana is a Japanese syllabic alphabet. Developed by Danil Ostaptsov." data-repo-url="https://github.com/move-fast-and-break-things/japanese-reader"><div class="project-image-container"><img src="img/jap-reader.jpg" alt="Japanese Reader Image"></div><div class="project-info"><h3>Japanese Reader</h3><span class="project-creator">Danil Ostaptsov</span><p>A Lightning App that recognizes handwritten Katakana characters.</p></div></div>
+
+            <div class="project-card hidden" data-title="Audio Compression" data-img-src="img/project-audio.jpg" data-details="An algorithm for audio compression. Developed by Artem Belyi." data-repo-url="https://github.com/move-fast-and-break-things/audio-compression"><div class="project-image-container"><img src="img/Audio-Compression.png" alt="Audio Compression Image"></div><div class="project-info"><h3>Audio Compression</h3><span class="project-creator">Artem Belyi</span><p>An experimental algorithm designed for audio compression.</p></div></div>
+
+            <div class="project-card hidden" data-title="Food Recogniser" data-img-src="img/project-food.jpg" data-details="The model determines whether the food is in the picture. Developed by Fedor Simonov." data-repo-url="https://github.com/move-fast-and-break-things/food-recogniser"><div class="project-image-container"><img src="img/food-reco.jpg" alt="Food Recogniser Image"></div><div class="project-info"><h3>Food Recogniser</h3><span class="project-creator">Fedor Simonov</span><p>A model that determines whether food is present in a picture.</p></div></div>
+
+            <div class="project-card hidden" data-title="The Masterpiece creator" data-img-src="img/project-art.jpg" data-details="Masterpiece creator uses the discoart library to create Disco Diffusion artworks. Developed by Irina Kogay." data-repo-url="https://github.com/move-fast-and-break-things/masterpiece-creator"><div class="project-image-container"><img src="img/masterpice.png" alt="Art Generation Image"></div><div class="project-info"><h3>The Masterpiece creator</h3><span class="project-creator">Irina Kogay</span><p>Uses the discoart library to create Disco Diffusion artworks.</p></div></div>
+
+            <div class="project-card hidden" data-title="Tic-Tac-Toe app" data-img-src="img/project-tictactoe.jpg" data-details="The application is tic-tac-toe on react native. A community project." data-repo-url="https://github.com/move-fast-and-break-things/rn-tic-tac-toe-demo"><div class="project-image-container"><img src="img/tic-tac-toe.jpg" alt="Tic-Tac-Toe Image"></div><div class="project-info"><h3>Tic-Tac-Toe app</h3><span class="project-creator">Community Project</span><p>A simple Tic-Tac-Toe application built with React Native.</p></div></div>
+
+            <div class="project-card hidden" data-title="Parrots" data-img-src="img/project-parrots.jpg" data-details="The ML model distinguishes by the photo of wavy, royal and haro parrots. Developed by Emma Maltseva." data-repo-url="https://github.com/move-fast-and-break-things/Parrots"><div class="project-image-container"><img src="img/Parrot.jpeg" alt="Parrots Image"></div><div class="project-info"><h3>Parrots</h3><span class="project-creator">Emma Maltseva</span><p>An ML model that distinguishes between wavy, royal, and haro parrots.</p></div></div>
+
+            <div class="project-card hidden" data-title="Spacemen" data-img-src="img/project-spacemen.jpg" data-details="The ML-model is able to classify astronauts, space marines and stormtroopers. Developed by Danil Ostaptsov." data-repo-url="https://github.com/move-fast-and-break-things/spacemen"><div class="project-image-container"><img src="img/Spacemen.webp" alt="Spacemen Image"></div><div class="project-info"><h3>Spacemen</h3><span class="project-creator">Danil Ostaptsov</span><p>An ML-model that classifies astronauts, space marines, and stormtroopers.</p></div></div>
+
+            <div class="project-card hidden" data-title="Spider Recognizer" data-img-src="img/project-spider.jpg" data-details="ML model classifying spiders. Developed by Irina Kogay." data-repo-url="https://github.com/move-fast-and-break-things/spider-recognizer"><div class="project-image-container"><img src="img/Spider.jpg" alt="Spider Recognizer Image"></div><div class="project-info"><h3>Spider Recognizer</h3><span class="project-creator">Irina Kogay</span><p>A machine learning model for classifying different types of spiders.</p></div></div>
+
+            <div class="project-card hidden" data-title="MFBT Website" data-img-src="img/project-website.jpg" data-details="The Move Fast and Break Things community website. Contains information about projects and their creators. Developed by Emma Maltseva." data-repo-url="https://github.com/move-fast-and-break-things"><div class="project-image-container"><img src="img/Gemini_Generated_Image_h19nvjh19nvjh19n.png" alt="Community Website Image"></div><div class="project-info"><h3>MFBT</h3><span class="project-creator">Tusahr Sharma</span><p>The community website, containing info about projects and creators.</p></div></div>
+
+        </div>
+        
+        <div class="project-controls">
+            <button id="load-more-btn" class="btn">Load More</button>
+            <button id="hide-btn" class="btn hidden">Show Less</button>
+        </div>
+    </section>
+
+    <section id="mission" class="mission-section">
+        <div class="mission-content">
+            <h2 class="section-title">OUR MISSION</h2>
+            <p class="mission-text">
+                We are committed to making our community a <span class="highlight">welcoming space</span> for everyone. Whether you're a seasoned developer, a beginner, or just curious, you're welcome here! We are dedicated to <span class="highlight">fostering growth</span>, <span class="highlight">collaboration</span>, and <span class="highlight">continuous learning</span>. Our mission is to cultivate an environment where individuals support each other in developing exceptional programs and expanding their knowledge.
+            </p>
+        </div>
+    </section>
+
+    <section id="values" class="values-section">
+        <h2 class="section-title">OUR VALUES</h2>
+        <div class="values-scroller-wrapper">
+            <button class="scroll-btn left" id="scroll-left">&lt;</button>
+            <div class="values-scroller" id="values-scroller">
+                <ul class="values-list">
+                    </ul>
+            </div>
+            <button class="scroll-btn right" id="scroll-right">&gt;</button>
+        </div>
+    </section>
+    
+    <section id="creators" class="creators-section">
+        <h2 class="section-title">MEET THE CREATORS</h2>
+        <div class="creator-slider-wrapper">
+            <button class="creator-nav-btn prev" id="creator-prev">&#8249;</button>
+            <div class="creator-card">
+                <div class="creator-image-container"><img src="" alt="Creator" id="creator-img"></div>
+                <div class="creator-info">
+                    <h3 id="creator-name"></h3>
+                    <span id="creator-role"></span>
+                    <p id="creator-bio"></p>
+                </div>
+            </div>
+            <button class="creator-nav-btn next" id="creator-next">&#8250;</button>
+        </div>
+        <div class="slider-dots" id="slider-dots"></div>
+    </section>
+
+    <section id="join-us" class="join-us-section">
+        <div class="join-us-content">
+            <h2 class="section-title anim-item">Join Us</h2>
+            <div class="join-us-block anim-item"><h3>Hi! Welcome to Move Fast and Break Things</h3><p>A community where passionate engineers collaborate, experiment, and grow together – fast.</p></div>
+            <div class="join-us-block anim-item"><h3>Who are we?</h3><p>We are a group of motivated, self-organized, hardworking, and kind people of very different levels of experience who are passionate about software engineering and product building. Among our members are experienced engineers and leaders such as Ivan Perkhun (Lead DS at BUDU), Irina Kogai (Engineering Lead at YouTalk), and Yurij Mikhalevich (Staff AI Engineering Lead at QA Wolf).</p><div class="quote-box"><p>"The community helped gain teamwork experience, master Git, and explore web development. I've tried AI, web, and mobile development here and discovered my true passion."</p><span>– Danil Ostaptsov</span></div><div class="quote-box"><p>"The community motivates me to work on my project every day."</p><span>– Ivan Pchelka</span></div></div>
+            <div class="join-us-block anim-item"><h3>What we do?</h3><p>We build fun, cool projects together, like <strong>Aibyss</strong> – a game where you code an AI to compete in a survival game, – and <strong>Minerva</strong> – an AI-powered bot that helps us learn more. We also host talks and webinars, and learn new things, like recent advancements in Quantum Computing, all the time!</p></div>
+            <div class="join-us-block anim-item"><h3>What will you get if you join us?</h3><ul class="benefits-list"><li>Build AI-driven and educational projects like Minerva or Aibyss</li><li>Develop full-stack, DevOps, or ML practical skills through hands-on collaboration</li><li>Learn time-saving workflows (e.g., CI/CD, Agile practices) to boost productivity</li><li>Get meaningful feedback during weekly peer code reviews and bi-weekly community meetings</li><li>Lead projects and mentor others</li></ul></div>
+            <div class="join-us-block anim-item"><h3>Is there a fee?</h3><p>While the opportunities you receive may be expensive elsewhere, joining our community costs <strong>$0 USD</strong>. This lets us, unlike other communities and courses, value quality of the community members over quantity. We believe all of us can learn from each other regardless of experience or seniority.</p></div>
+            <div class="join-us-block anim-item"><h3>What is expected from you?</h3><p>To maintain our $0 USD membership, we ask you to contribute regularly. <strong>Every</strong> community member is expected to participate in the community projects (or lead new ones), attend and host community meetings and webinars, and participate in and organize community events. We take this very seriously. Members typically contribute <strong>2–4 hours weekly</strong>. The best part is that the actual learning, growth, and development happen when you actively do all of these things!</p></div>
+            <div class="join-us-block anim-item"><h3>How to join?</h3><ol class="join-steps-list"><li><strong>Find an issue:</strong> Browse our GitHub projects and look for “good first issue” labels.</li><li><strong>Claim it:</strong> Comment on the issue to let us know you’re working on it.</li><li><strong>Code:</strong> Submit a PR with your solution.</li><li><strong>Collaborate:</strong> Work with us to refine and merge your PR.</li><li><strong>Join:</strong> We’ll email you within 48 hours after merging by email associated with your Git commits!</li></ol></div>
+            <div class="join-us-block anim-item"><p class="final-call">Ready to contribute to the community and believe we will have fun working on cool projects together? Start by picking your first GitHub issue today!</p><p>If you have any questions, contact us on <a href="mailto:mfbt.community@gmail.com">mfbt.community@gmail.com</a>.</p></div>
+        </div>
+    </section>
+
+    <div id="project-modal" class="modal-overlay modal-hidden">
+        <div class="modal-content">
+            <button class="modal-close-btn">&times;</button>
+            <img id="modal-img" src="" alt="Project Image">
+            <h3 id="modal-title"></h3>
+            <p id="modal-details"></p>
+            <a href="#" id="modal-link" class="btn" target="_blank">See Repository &rarr;</a>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <a href="https://github.com/your-community-repo" target="_blank" class="footer-icon" aria-label="GitHub Community">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" width="28" height="28" role="img">
+                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.67.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+                </svg>
+            </a>
+            <a href="#" class="footer-logo">&lt;MFBT&gt;</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
